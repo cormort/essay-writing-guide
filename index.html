@@ -3,6 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高分作文解題策略與實例分析</title>
+    <meta name="description" content="高分作文解題四維矩陣 × 國中會考(104-114) × 學測國寫(107-115) — 完整範文與破題策略">
+    <meta property="og:title" content="高分作文解題策略與實例分析">
+    <meta property="og:description" content="解題四維矩陣 × 國中會考(104-114) × 學測國寫(107-115)完整範文 — 附破關實戰指南">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cormort.github.io/essay-writing-guide/">
+    <meta property="og:locale" content="zh_TW">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
     <style>
         :root {
             --primary: #2c3e50;
@@ -193,21 +200,82 @@
         }
         .practice-box h3 { color: #27ae60; }
 
+        /* 表格手機水平捲動 */
+        .table-wrapper { overflow-x: auto; margin: 25px 0; }
+        .table-wrapper table { margin: 0; }
+
+        /* 行動裝置頁籤按鈕 */
+        @media (max-width: 600px) {
+            .tab button {
+                min-width: 0;
+                flex: 1 1 auto;
+                font-size: 0.95em;
+                padding: 12px 8px;
+            }
+            body { padding: 10px; }
+            h1 { font-size: 1.6em; }
+            .tabcontent { padding: 20px 12px; }
+        }
+
+        /* 減少動畫偏好 */
+        @media (prefers-reduced-motion: reduce) {
+            .tabcontent { animation: none; }
+        }
+
+        /* 回到頂端按鈕 */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        #backToTop:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* 無障礙：聚焦狀態 */
+        .tab button:focus-visible {
+            outline: 3px solid #e67e22;
+            outline-offset: 2px;
+        }
+        #backToTop:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
 
     <h1>高分作文解題策略與實例分析</h1>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Tab1')">一、解題四維矩陣</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab2')">二、國中會考實例</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab3')">三、學測國寫實例</button>
-        <button class="tablinks" onclick="openTab(event, 'Tab4')" id="defaultOpen">四、破關實戰與叮嚀</button>
+    <div class="tab" role="tablist" aria-label="作文主題分頁">
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab1" onclick="openTab(event, 'Tab1')">一、解題四維矩陣</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab2" onclick="openTab(event, 'Tab2')">二、國中會考實例</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab3" onclick="openTab(event, 'Tab3')">三、學測國寫實例</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab4" onclick="openTab(event, 'Tab4')" id="defaultOpen">四、破關實戰與叮嚀</button>
     </div>
 
     <!-- 第一個頁籤：解題四維矩陣 -->
-    <div id="Tab1" class="tabcontent">
+    <div id="Tab1" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab1-label">
         <h2>應對考場上千變萬化的作文題目</h2>
         
         <div class="intro-box">
@@ -215,7 +283,7 @@
             <p>以下整理了一套適用於各種考試的<strong>「解題四維矩陣」</strong>。這套框架就像是程式設計的 IPO 邏輯（Input-Process-Output），能幫助你在看到題目的前 3 分鐘內，迅速拆解資訊、確立核心，並搭好文章骨架。</p>
         </div>
 
-        <table>
+        <div class="table-wrapper"><table>
             <thead>
                 <tr>
                     <th>步驟</th>
@@ -250,7 +318,7 @@
                     <td>這個經驗帶給我什麼更深層的生命哲理？</td>
                 </tr>
             </tbody>
-        </table>
+        </table></div>
 
         <h3>四個步驟詳細操作方法：</h3>
 
@@ -295,7 +363,7 @@
     </div>
 
     <!-- 第二個頁籤：國中會考作文 -->
-    <div id="Tab2" class="tabcontent">
+    <div id="Tab2" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab2-label">
         <h2>國中會考作文（104-114 年）</h2>
         <!-- 此處內容與先前的國中會考實例相同，為節省長度不變動結構 -->
         <div class="topic-card">
@@ -385,7 +453,7 @@
 </div>
 </div>
 <!-- 第三個頁籤：學測國寫 -->
-<div id="Tab3" class="tabcontent">
+<div id="Tab3" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab3-label">
 <h2>學測國寫（107-115 年）</h2>
 <p style="color: #555; font-style: italic; margin-bottom: 20px;">學測因為分「知性」與「情意」，兩者寫作策略完全不同。知性題講求邏輯論證與思辨；情意題講求畫面感與情感共鳴。</p>
 <!-- 學測實例不變 -->
@@ -540,7 +608,7 @@
 </div>
 </div>
 <!-- 第四個頁籤：破關實戰與叮嚀 -->
-<div id="Tab4" class="tabcontent">
+<div id="Tab4" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab4-label">
 <h2>實戰演練與叮嚀：作文破關指南</h2>
 <div class="intro-box" style="border-left-color: #8e44ad; background-color: #f4ecf7;">
 <p>其實，拆解作文題目就像是在打遊戲破關。我們不要背什麼複雜的矩陣，只要記住這四個<strong>「破關步驟」</strong>，你就能在拿到考卷的三分鐘內，迅速想好要寫什麼。</p>
@@ -596,22 +664,109 @@
 <p>考試時無法寫出這麼字斟句酌的文句，這些段落的價值在於<strong>「提供你思考的破題角度」</strong>以及<strong>「段落佈局的骨架」</strong>。建議你可以挑幾個自己比較沒把握的題目，試著用自己的話把「中間段」的細節填滿，這會是非常好的考前練筆！</p>
 </div>
 </div>
+<div id="backToTop" role="button" tabindex="0" aria-label="回到頂端" title="回到頂端">↑</div>
 <script>
-function openTab(evt, tabName) {
-var i, tabcontent, tablinks;
-tabcontent = document.getElementsByClassName("tabcontent");
-for (i = 0; i < tabcontent.length; i++) {
-tabcontent[i].style.display = "none";
-}
-tablinks = document.getElementsByClassName("tablinks");
-for (i = 0; i < tablinks.length; i++) {
-tablinks[i].className = tablinks[i].className.replace(" active", "");
-}
-document.getElementById(tabName).style.display = "block";
-evt.currentTarget.className += " active";
-}
-// 預設開啟第四個頁籤 (配合修改需求呈現)
-document.getElementById("defaultOpen").click();
+(function() {
+  var tabNames = ['Tab1', 'Tab2', 'Tab3', 'Tab4'];
+  var tabEls = {};
+  var panelEls = {};
+
+  // Collect elements
+  tabNames.forEach(function(name) {
+    tabEls[name] = document.querySelector('.tablinks[aria-controls="' + name + '"]');
+    panelEls[name] = document.getElementById(name);
+  });
+
+  function activateTab(tabName, updateHash) {
+    // Hide all panels, deselect all tabs
+    tabNames.forEach(function(name) {
+      panelEls[name].style.display = 'none';
+      panelEls[name].setAttribute('aria-hidden', 'true');
+      tabEls[name].className = tabEls[name].className.replace(' active', '');
+      tabEls[name].setAttribute('aria-selected', 'false');
+    });
+
+    // Show selected
+    panelEls[tabName].style.display = 'block';
+    panelEls[tabName].setAttribute('aria-hidden', 'false');
+    tabEls[tabName].className += ' active';
+    tabEls[tabName].setAttribute('aria-selected', 'true');
+    tabEls[tabName].focus();
+
+    if (updateHash !== false) {
+      history.replaceState(null, '', '#' + tabName);
+    }
+  }
+
+  // Expose globally for onclick
+  window.openTab = function(evt, tabName) {
+    activateTab(tabName);
+  };
+
+  // Keyboard navigation (← / →)
+  var tabList = document.querySelector('.tab');
+  tabList.addEventListener('keydown', function(e) {
+    var current = document.querySelector('.tablinks.active');
+    if (!current) return;
+    var idx = tabNames.indexOf(current.getAttribute('aria-controls'));
+    if (idx === -1) return;
+
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      var next = (idx + 1) % tabNames.length;
+      activateTab(tabNames[next]);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      var prev = (idx - 1 + tabNames.length) % tabNames.length;
+      activateTab(tabNames[prev]);
+    }
+  });
+
+  // Load from hash on page load
+  function initFromHash() {
+    var hash = location.hash.replace('#', '');
+    if (tabNames.indexOf(hash) !== -1) {
+      activateTab(hash, false);
+    } else {
+      // Default: Tab4
+      activateTab('Tab4', false);
+    }
+  }
+
+  // Listen for hash changes (browser back/forward)
+  window.addEventListener('hashchange', function() {
+    var hash = location.hash.replace('#', '');
+    if (tabNames.indexOf(hash) !== -1) {
+      activateTab(hash, false);
+    }
+  });
+
+  // Back to top button
+  var backBtn = document.getElementById('backToTop');
+  backBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  backBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  var scrollTimer;
+  window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+      if (window.scrollY > 300) {
+        backBtn.classList.add('visible');
+      } else {
+        backBtn.classList.remove('visible');
+      }
+    }, 100);
+  }, { passive: true });
+
+  initFromHash();
+})();
 </script>
 </body>
 </html>
