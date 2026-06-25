@@ -1,772 +1,769 @@
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高分作文解題策略與實例分析</title>
-    <meta name="description" content="高分作文解題四維矩陣 × 國中會考(104-114) × 學測國寫(107-115) — 完整範文與破題策略">
+    <meta name="description" content="四維矩陣 × 國中生/高中生雙版本 × 會考(104-114) × 學測(107-115) — 完整範文與破題策略">
     <meta property="og:title" content="高分作文解題策略與實例分析">
-    <meta property="og:description" content="解題四維矩陣 × 國中會考(104-114) × 學測國寫(107-115)完整範文 — 附破關實戰指南">
+    <meta property="og:description" content="四維矩陣 × 國中會考(104-114) × 學測國寫(107-115)完整範文 — 分級閱讀版本">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cormort.github.io/essay-writing-guide/">
     <meta property="og:locale" content="zh_TW">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #34495e;
-            --accent: #3498db;
-            --accent-hover: #2980b9;
-            --bg-color: #f8f9fa;
-            --text-color: #333;
-            --tab-bg: #e9ecef;
-            --border-color: #dee2e6;
+            --primary: #2c3e50; --secondary: #34495e; --accent: #3498db;
+            --accent-hover: #2980b9; --bg-color: #f8f9fa; --text-color: #333;
+            --tab-bg: #e9ecef; --border-color: #dee2e6;
+            --theory-bg: #fef9e7; --theory-accent: #f39c12;
+            --gsh-color: #27ae60; --ceec-color: #8e44ad;
+            --junior-bg: #eafaf1; --senior-bg: #f4ecf7;
         }
-
+        * { box-sizing: border-box; }
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
+            font-size: 18px; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color);
+            max-width: 1100px; margin: 0 auto; padding: 20px;
         }
-
-        h1 {
-            text-align: center;
-            color: var(--primary);
-            margin-bottom: 30px;
-            font-size: 2.2em;
-            letter-spacing: 1px;
-        }
-
-        /* 頁籤樣式 */
+        h1 { text-align: center; color: var(--primary); margin-bottom: 8px; font-size: 2em; letter-spacing: 1px; }
+        .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 25px; font-size: 0.95em; }
         .tab {
-            overflow: hidden;
-            border-bottom: 2px solid var(--accent);
-            display: flex;
-            background-color: var(--tab-bg);
-            border-radius: 8px 8px 0 0;
-            flex-wrap: wrap;
+            overflow: hidden; border-bottom: 2px solid var(--accent);
+            display: flex; background-color: var(--tab-bg);
+            border-radius: 8px 8px 0 0; flex-wrap: wrap;
         }
-
         .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 15px;
-            transition: 0.3s;
-            font-size: 1.1em;
-            font-weight: bold;
-            color: var(--secondary);
-            flex: 1;
-            min-width: 150px;
+            background-color: inherit; float: left; border: none; outline: none;
+            cursor: pointer; padding: 12px 10px; transition: 0.3s;
+            font-size: 0.95em; font-weight: bold; color: var(--secondary);
+            flex: 1; min-width: 120px;
         }
-
-        .tab button:hover {
-            background-color: #d1d8e0;
-            color: var(--accent);
-        }
-
-        .tab button.active {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        /* 頁籤內容樣式 */
+        .tab button:hover { background-color: #d1d8e0; color: var(--accent); }
+        .tab button.active { background-color: var(--accent); color: white; }
         .tabcontent {
-            display: none;
-            padding: 30px 20px;
-            background-color: #fff;
-            border: 1px solid var(--border-color);
-            border-top: none;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            animation: fadeEffect 0.5s;
+            display: none; padding: 25px 18px; background-color: #fff;
+            border: 1px solid var(--border-color); border-top: none;
+            border-radius: 0 0 8px 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            animation: fadeEffect 0.4s;
         }
-
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--border-color); padding-bottom: 8px; margin-top: 0; }
+        h3 { color: var(--accent); margin: 18px 0 12px; }
+        h4 { color: #d35400; margin: 16px 0 8px; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+        .theory-tag {
+            display: inline-block; font-size: 0.72em; padding: 1px 7px; border-radius: 10px;
+            background: #fef9e7; color: #e67e22; border: 1px solid #f9e79f; margin: 1px 2px; white-space: nowrap;
         }
-
-        /* 標題與內文樣式 */
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-
-        h3 {
-            color: var(--accent);
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
         .intro-box {
-            background-color: #f1f8ff;
-            border-left: 5px solid var(--accent);
-            padding: 15px 20px;
-            margin-bottom: 25px;
-            border-radius: 4px;
+            background-color: #f1f8ff; border-left: 5px solid var(--accent);
+            padding: 12px 18px; margin-bottom: 20px; border-radius: 4px;
         }
-
-        /* 表格樣式 */
+        .junior-box { background-color: var(--junior-bg); border-left: 5px solid var(--gsh-color); }
+        .senior-box { background-color: var(--senior-bg); border-left: 5px solid var(--ceec-color); }
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background-color: #fff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            width: 100%; border-collapse: collapse; margin: 15px 0;
+            background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-size: 0.93em;
         }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: var(--primary);
-            color: white;
-            font-weight: bold;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* 矩陣區塊樣式 */
+        th, td { padding: 9px 11px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background-color: var(--primary); color: white; font-weight: bold; }
+        tr:hover { background-color: #f5f5f5; }
         .matrix-step {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border: 1px solid var(--border-color);
+            background-color: #fff; border-radius: 8px; padding: 15px; margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid var(--border-color);
         }
-        
-        .matrix-step h4 {
-            color: #d35400;
-            margin-top: 0;
-            font-size: 1.2em;
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 8px;
-        }
-
-        /* 實例卡片樣式 */
+        .matrix-step.junior { border-left: 4px solid var(--gsh-color); }
+        .matrix-step.senior { border-left: 4px solid var(--ceec-color); }
         .topic-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-            padding: 20px 25px;
-            margin-bottom: 25px;
-            border-left: 5px solid var(--accent);
-            border-top: 1px solid #eee;
-            border-right: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            padding: 16px 20px; margin-bottom: 20px;
+            border-left: 5px solid var(--accent); border-top: 1px solid #eee;
+            border-right: 1px solid #eee; border-bottom: 1px solid #eee;
         }
-
-        .topic-card.gsh { border-left-color: #e67e22; }
-
-        .paragraph { margin-bottom: 15px; }
-
+        .topic-card.gsh { border-left-color: var(--gsh-color); }
+        .topic-card.ceec { border-left-color: var(--ceec-color); }
+        .paragraph { margin-bottom: 10px; line-height: 1.8; }
         .label {
-            font-weight: bold;
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: 4px;
-            margin-right: 8px;
-            font-size: 0.9em;
+            font-weight: bold; display: inline-block; padding: 2px 7px; border-radius: 4px;
+            margin-right: 5px; font-size: 0.82em;
         }
         .label-intro { background-color: #e8f5e9; color: #2e7d32; }
         .label-body { background-color: #fff3e0; color: #e65100; }
         .label-outro { background-color: #e3f2fd; color: #1565c0; }
-
-        ul { margin-top: 5px; padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        
+        .label-theory { background-color: #fef9e7; color: #e67e22; }
+        ul { margin-top: 5px; padding-left: 18px; }
+        li { margin-bottom: 6px; }
         mark { background-color: #fff3cd; padding: 0 4px; border-radius: 3px; }
-
         .practice-box {
-            background-color: #fdfefe;
-            border: 2px solid #2ecc71;
-            border-radius: 8px;
-            padding: 25px;
-            margin-top: 20px;
+            background-color: #fdfefe; border: 2px solid #2ecc71;
+            border-radius: 8px; padding: 20px; margin-top: 18px;
         }
         .practice-box h3 { color: #27ae60; }
-
-        /* 表格手機水平捲動 */
-        .table-wrapper { overflow-x: auto; margin: 25px 0; }
+        .table-wrapper { overflow-x: auto; margin: 15px 0; }
         .table-wrapper table { margin: 0; }
-
-        /* 行動裝置頁籤按鈕 */
+        .theory-note {
+            background: var(--theory-bg); border-left: 4px solid var(--theory-accent);
+            padding: 10px 14px; margin: 12px 0; border-radius: 4px; font-size: 0.9em;
+        }
+        .theory-note strong { color: #e67e22; }
+        .tool-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 12px 0; }
+        .tool-item {
+            background: #fff; border: 1px solid var(--border-color);
+            border-radius: 6px; padding: 10px 13px;
+        }
+        .tool-item h4 { margin: 0 0 3px 0; border: none; padding: 0; font-size: 0.98em; }
+        .tool-item .meta { font-size: 0.82em; color: #7f8c8d; margin-bottom: 4px; }
+        .tool-item p { margin: 4px 0; }
+        .dimension-nav {
+            display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0;
+        }
+        .dimension-nav a {
+            display: inline-block; padding: 5px 12px; border-radius: 20px;
+            background: #eaf2f8; color: var(--accent); text-decoration: none;
+            font-weight: bold; font-size: 0.85em; border: 1px solid #d4e6f1;
+        }
+        .dimension-nav a:hover { background: var(--accent); color: white; }
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; padding: 16px; border-radius: 8px; margin: 18px 0;
+            text-align: center; font-size: 1em;
+        }
+        .level-badge {
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 0.8em; font-weight: bold; color: white;
+        }
+        .level-junior { background: var(--gsh-color); }
+        .level-senior { background: var(--ceec-color); }
+        @media (min-width: 700px) { .tool-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 900px) {
+            .topic-card { padding: 12px 14px; }
+            .matrix-step { padding: 12px; }
+            .practice-box { padding: 14px; }
+            table { font-size: 0.85em; }
+            th, td { padding: 6px 8px; }
+        }
         @media (max-width: 600px) {
-            .tab button {
-                min-width: 0;
-                flex: 1 1 auto;
-                font-size: 0.95em;
-                padding: 12px 8px;
-            }
-            body { padding: 10px; }
-            h1 { font-size: 1.6em; }
-            .tabcontent { padding: 20px 12px; }
+            .tab button { min-width: 0; flex: 1 1 auto; font-size: 0.72em; padding: 6px 3px; }
+            body { padding: 8px; } h1 { font-size: 1.2em; }
+            .tabcontent { padding: 10px 6px; }
+            .topic-card { padding: 10px 10px; margin-bottom: 14px; border-left-width: 4px; }
+            .topic-card h3 { font-size: 1em; }
+            .label { font-size: 0.75em; padding: 1px 5px; }
+            .paragraph { line-height: 1.7; }
+            .matrix-step { padding: 10px; }
+            .practice-box { padding: 12px; }
+            #backToTop { width: 34px; height: 34px; font-size: 1.1em; bottom: 15px; right: 15px; }
+            .tabcontent img { max-width: 100%; height: auto; }
+            table { font-size: 0.8em; display: block; overflow-x: auto; white-space: nowrap; }
+            th, td { padding: 5px 6px; }
+            .ref-tip { font-size: 0.78em; }
         }
-
-        /* 減少動畫偏好 */
-        @media (prefers-reduced-motion: reduce) {
-            .tabcontent { animation: none; }
+        @media (max-width: 420px) {
+            body { padding: 5px; }
+            h1 { font-size: 1em; }
+            .tab button { font-size: 0.65em; padding: 5px 2px; }
+            .topic-card { padding: 8px 6px; }
+            .tabcontent { padding: 8px 4px; }
         }
-
-        /* 回到頂端按鈕 */
+        @media (prefers-reduced-motion: reduce) { .tabcontent { animation: none; } }
         #backToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5em;
+            position: fixed; bottom: 25px; right: 25px; width: 40px; height: 40px;
+            border-radius: 50%; background-color: var(--accent); color: white;
+            border: none; cursor: pointer; font-size: 1.3em;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+            z-index: 1000; display: flex; align-items: center; justify-content: center;
         }
-        #backToTop.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        #backToTop:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* 無障礙：聚焦狀態 */
-        .tab button:focus-visible {
-            outline: 3px solid #e67e22;
-            outline-offset: 2px;
-        }
-        #backToTop:focus-visible {
-            outline: 3px solid #fff;
-            outline-offset: 2px;
-        }
+        #backToTop.visible { opacity: 1; visibility: visible; }
+        #backToTop:hover { background-color: var(--accent-hover); }
+        .tab button:focus-visible, #backToTop:focus-visible { outline: 3px solid #e67e22; outline-offset: 2px; }
+        .practice-box table { margin: 10px 0; }
+        .practice-box td:first-child { font-weight: bold; white-space: nowrap; width: 60px; }
+        .ref-tip { font-size: 0.85em; color: #7f8c8d; font-style: italic; margin: 5px 0; }
     </style>
 </head>
 <body>
-
-    <h1>高分作文解題策略與實例分析</h1>
+    <h1>📝 高分作文解題策略與實例分析</h1>
+    <p class="subtitle">四維矩陣 × 分級閱讀 × 國中會考(104-114) × 學測國寫(107-115)</p>
 
     <div class="tab" role="tablist" aria-label="作文主題分頁">
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab1" onclick="openTab(event, 'Tab1')">一、解題四維矩陣</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab2" onclick="openTab(event, 'Tab2')">二、國中會考實例</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab3" onclick="openTab(event, 'Tab3')">三、學測國寫實例</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab4" onclick="openTab(event, 'Tab4')" id="defaultOpen">四、破關實戰與叮嚀</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab1" onclick="openTab(event, 'Tab1')" id="defaultOpen"><span class="level-badge level-junior">國中</span> 會考專區</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab2" onclick="openTab(event, 'Tab2')"><span class="level-badge level-senior">高中</span> 學測專區</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab3" onclick="openTab(event, 'Tab3')" >實戰與工具書</button>
+        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab4" onclick="openTab(event, 'Tab4')">文學理論 × 四維矩陣</button>
     </div>
 
-    <!-- 第一個頁籤：解題四維矩陣 -->
-    <div id="Tab1" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab1-label">
-        <h2>應對考場上千變萬化的作文題目</h2>
-        
+    <!-- ============ TAB 1: 國中會考專區 ============ -->
+    <div id="Tab1" class="tabcontent" role="tabpanel" aria-hidden="true">
+        <h2><span class="level-badge level-junior">國中</span> 會考作文：四維矩陣（簡單版）</h2>
+        <div class="intro-box junior-box">
+            <p><strong>給國中生：</strong>看到作文題目先不要急著下筆！用下面這四個步驟，3 分鐘就能打好文章的骨架。</p>
+            <p>4 個步驟就像蓋房子：先打地基 → 再立柱子 → 然後砌牆 → 最後裝潢。照著順序做，文章就會穩穩的。</p>
+        </div>
+
+        <div class="matrix-step junior">
+            <h4>① 看清楚題目在問什麼</h4>
+            <p>把題目拆成小零件，一個一個看：</p>
+            <ul>
+                <li><strong>名詞（主角）：</strong>題目要你寫什麼東西？「新冰箱」、「縫隙」</li>
+                <li><strong>動詞（動作）：</strong>你跟這樣東西之間發生什麼事？「打開課本」、「看見」</li>
+                <li><strong>形容詞（限制）：</strong>⭐ <strong>這是最容易漏掉的得分關鍵！</strong>「<mark>未成功</mark>的物品」→ 不能寫成功的東西；「我希望擁有的時光」→ 現在還沒有</li>
+            </ul>
+            <p class="ref-tip">💡 用螢光筆圈出題目中的形容詞，那往往是陷阱題的關鍵。</p>
+        </div>
+
+        <div class="matrix-step junior">
+            <h4>② 找到題目的兩面</h4>
+            <p>好文章一定要有「衝突感」——一件事情有好的地方，也有不好的地方，你在中間怎麼辦？</p>
+            <div class="table-wrapper"><table>
+                <tr><th>題目</th><th>表面上看起來</th><th>但其實是⋯⋯</th></tr>
+                <tr><td>「多做多得」</td><td>好像吃虧了（很累）</td><td>實際上得到了經驗和成長</td></tr>
+                <tr><td>「捨不得」</td><td>太愛了所以放不下</td><td>學會放下才能繼續向前</td></tr>
+                <tr><td>「青銀共居」</td><td>老人和年輕人合不來</td><td>互相理解後其實可以很棒</td></tr>
+            </table></div>
+            <p><strong>寫法建議：</strong>前半段寫「不好的那一面」，中間經過一件事讓你改變想法，後半段寫「好的那一面」。</p>
+        </div>
+
+        <div class="matrix-step junior">
+            <h4>③ 用「自己的生活經驗」來寫</h4>
+            <div class="table-wrapper"><table>
+                <tr><th>題目太大怎麼辦？</th><th>題目太小怎麼辦？</th></tr>
+                <tr>
+                    <td>題目像「我們這個世代」這種大題目→<br>找一個<strong>很小</strong>的生活場景來寫，例如「除夕夜全家各自滑手機」</td>
+                    <td>題目像「冰箱」這種小東西→<br>不要只寫冰箱長怎樣，要寫它<strong>對你的意義</strong>，例如冰箱是「凍結美好回憶的盒子」</td>
+                </tr>
+            </table></div>
+            <p class="ref-tip">💡 越具體越好！不要說「我很感動」，要說「我眼眶濕了，一句話都說不出來」。</p>
+        </div>
+
+        <div class="matrix-step junior">
+            <h4>④ 結尾要拉高層次（這是拿高分的關鍵！）</h4>
+            <p>結尾不要只把前面再說一次。要讓讀者覺得：<strong>「哇，原來這件事背後有這麼深的道理！」</strong></p>
+            <p>套用這個句型：<mark>「這表面上是在寫（事件），但其實是在說（道理）。」</mark></p>
+            <div class="table-wrapper"><table>
+                <tr><th>題目</th><th>表面上</th><th>其實是在說</th></tr>
+                <tr><td>「從陌生到熟悉」</td><td>學會騎腳踏車</td><td>克服恐懼後，發現自己比想像中勇敢</td></tr>
+                <tr><td>「花草的氣味」</td><td>聞到花的味道</td><td>味道連結了回憶，讓我想起阿嬤的後花園</td></tr>
+            </table></div>
+        </div>
+
+        <div class="matrix-step junior">
+            <h4>中間段這樣寫</h4>
+            <p>寫論說文的時候，中間段不知道要寫什麼？試試這兩招：</p>
+            <p><strong>方法一：正反例子法</strong></p>
+            <ul>
+                <li><strong>正面例子：</strong>先寫一個「這樣做會很好」的例子。<br>
+                    例如寫「多做多得」——正面例子：「我以前不幫忙，結果都沒朋友。後來開始主動幫同學，發現大家反而更願意幫我。」</li>
+                <li><strong>反面例子：</strong>再寫一個「不這樣做會很慘」的例子。<br>
+                    例如：「我表哥什麼都計較，多掃一次地都不肯，結果分組報告都沒人要跟他一組。」</li>
+                <li><strong>小結論：</strong>一句話總結：「多做表面上吃虧，但其實是在交朋友。」</li>
+            </ul>
+            <p><strong>方法二：例子堆疊法</strong></p>
+            <ul>
+                <li><strong>例子1（我自己）：</strong>用自己發生過的事，最有感覺</li>
+                <li><strong>例子2（我看到的）：</strong>用同學、家人、新聞上看到的事</li>
+                <li><strong>例子3（我聯想到的）：</strong>用課本讀過的名人故事或名言</li>
+            </ul>
+            <p class="ref-tip">💡 三個例子從「自己」→「身邊」→「世界」，越寫越大，分數也越高！</p>
+        </div>
+
+        <h3>📋 國中會考實例（104–114 年）</h3>
+
+        <div class="topic-card gsh">
+            <h3>104 年：捨不得</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「雙手容量有限」的比喻破題，點出「捨不得」的矛盾——越緊抓就越無法前進</span><br>
+人的雙手容量有限，抓緊了過往，便空不出手來擁抱未來。那件靜靜躺在抽屜深處的舊毛衣，早已穿不下，卻承載著外婆的體溫與我童年的依賴，讓我遲遲捨不得丟棄。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「五感描寫」——顏色（粉紅）、觸感（柔軟）、嗅覺（檀香）——把抽象的情感附著在具體的感官細節上</span><br>
+那件毛衣是外婆在我小學三年級時織的，淺淺的粉紅色，領口還繡了一朵歪歪的小花。外婆總說：「你這麼怕冷，不穿多一點怎麼行。」每次穿上它，都聞得到外婆家裡那股淡淡的檀香味。五年過去了，毛衣早已穿不下，袖口也起了毛球，但每次翻到抽屜最底層，摸到那柔軟的觸感，我就想起外婆在客廳織毛衣的背影——老花眼鏡掛在鼻尖，一針一線都很慢，好像在把她的叮嚀也一起織進去。可是今年要搬家了，媽媽說：「這麼舊了，丟了吧。」我抱著那件毛衣，在房間坐了很久很久。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「翻轉」——不是丟掉，而是把愛昇華；不是失去，而是內化</span><br>
+捨不得，是因為愛得太深。但後來我懂了——我把毛衣摺好捐出去，因為外婆的溫暖早就住在我的心裡，不需要靠一件毛衣來證明。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">先寫具體再寫抽象</span><span class="theory-tag">結尾拉高層次</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>105 年：從陌生到熟悉</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「現在vs過去」的對比開場，快速建立張力</span><br>
+所有的得心應手，都曾經過一段笨拙的過程。現在在琴鍵上飛舞的雙手，三年前面對鋼琴時，其實充滿了陌生和害怕。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「具體挫折」＋「一句關鍵鼓勵」作為轉折點——先寫失敗讓讀者共鳴，再寫突破讓讀者感動</span><br>
+我還記得第一次上鋼琴課，老師彈了一段簡單的旋律，我心想：「好像沒有很難嘛。」結果換我坐上琴椅，手指放上去——完全不知道要按哪裡。接下來的兩個禮拜，我每天都要跟那幾顆白鍵黑鍵奮戰。Do Re Mi Fa Sol，彈出來的聲音斷斷續續的，像一臺快壞掉的收音機。我好幾次都想放棄，覺得自己的手指好像天生就跟鋼琴有仇。有一天，我終於把一首只有八小節的練習曲從頭到尾彈完了，雖然中間還是不小心按錯兩個音，但老師說：「你聽，這次連起來了。」就是那句話，讓我決定再堅持一下。從那天之後，我每天多練十分鐘，慢慢地，那些音符開始聽話了。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從技能升級到「自我認識」——把一個小經驗放大成一輩子都適用的道理</span><br>
+從陌生到熟悉，不只是一項技能的進步，更是一趟發現自己比想像中勇敢的旅程。永遠不要害怕開始，因為每一次的陌生，都是通往新自己的大門。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">對比（陌生vs熟悉）</span><span class="theory-tag">轉折點</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>106 年：在這樣的傳統習俗裡，我看見______</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：直接進入場景畫面，用五感（火鍋煙霧、熱氣）把讀者拉進現場</span><br>
+除夕夜，全家圍在一起吃年夜飯。在熱氣騰騰的火鍋煙霧中，我看見的不只是豐盛的年夜飯，更看見了平常各忙各的家人，難得聚在一起的溫暖。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「小時候覺得煩vs長大後才懂」的對比結構，讓習俗的意義自然浮現</span><br>
+每年的這一天，媽媽總是天亮就開始忙。廚房裡傳來剁菜的咚咚聲，混著麻油和醬油的香氣，整個房子都暖烘烘的。奶奶在客廳摺金紙，一邊摺一邊唸：「你阿公最喜歡吃這個口味的年糕了。」桌上擺滿了菜——魚、雞、長年菜，每一道都有它的意思。小時候我只覺得無聊，為什麼每年都要做一樣的事？為什麼不能像平時一樣看電視就好？但這幾年我慢慢發現，那些看似無聊的儀式，其實是家人之間不需要說出口的默契。阿嬤堅持要親手包水餃，因為她包的餃子有她媽的味道；爸爸每年都會說同一句吉祥話，說的時候眼睛會笑。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：把「傳統習俗」提升到「家族連結」的層次，比喻（無形的線）讓抽象概念變得具體</span><br>
+傳統習俗不是老掉牙的東西，而是祖先留給我們的溫柔提醒。在忙碌的生活中，這些習慣就像一條無形的線，把我們和家緊緊連在一起。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">五感描寫</span><span class="theory-tag">小時候vs長大後</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>107 年：我們這個世代</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「反差」破題——手指靈活vs餐桌沉默，一句話就點出世代矛盾</span><br>
+我們是被手機和網路養大的一代。手指可以在螢幕上滑得飛快，但真實生活中，卻常常在餐桌上不知道要跟家人說什麼。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「一個具體場景」（班聚放手機）來承載整段論述，避免空泛說理</span><br>
+我們這一代最擅長的是「快速切換」。上課時偷偷滑手機，午餐時間一邊吃飯一邊回訊息，放學後打開 YouTube「只看五分鐘」結果兩小時過去了。我們知道很多網路用語——yyds、笑死、破防了——但在真實的對話中，我們常常不知道要說什麼。有一次班聚，大家坐下來，前十分鐘每個人都在低頭滑手機，有人開玩笑說：「我們是不是應該把手機疊起來，第一個忍不住要請客？」大家笑了，但也默默把手機放到桌子中間。那天下午，我們聊了很多平常在網路上不會說的話——誰家的貓生了小貓、誰的媽媽做的餅乾超好吃。我發現，原來大家的笑聲比任何濾鏡都好看。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：不否定科技，而是提出「工具的意義在於如何使用」——翻轉世代標籤</span><br>
+我們這個世代不是只會滑手機的廢青。我們擁有前所未有的工具，更要學會用這些工具解決真實的問題，在冰冷的科技中，找回人跟人之間的溫度。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">兩面寫法</span><span class="theory-tag">結尾拉高</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>108 年：青銀共居</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「對比」製造張力——熬夜打電動vs早起逛菜市場，兩種世界的碰撞</span><br>
+年輕人的熬夜打電動，和老年人的早起逛菜市場，聽起來根本是兩個世界。但如果把他們放在同一個屋簷下呢？</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「衝突→破冰→互惠」的三段結構；關鍵在於找到一個具體的連結點（教用LINE）</span><br>
+剛搬進去的第一週，我們幾乎沒有交集。我晚上十一點開始打電動，他早上六點就在廚房煎魚——欸，六點煎魚？整間房子都是油煙味。我心裡想：「要不要這麼誇張。」他大概也覺得我很吵，好幾次我半夜去裝水，都看到他房門縫透著光，但從來不出來跟我說話。直到有一天，我在客廳看 Netflix，他突然走過來問：「你那個小盒子，要怎麼拿來打電話？」我愣了一下才發現他說的是我的手機。我教他用 LINE，他學會之後很興奮地打給他在美國的孫女，講完之後眼眶有點紅紅的，跟我說謝謝。後來他教會了我下象棋，我教會了他 Google Maps。我們開始一起吃晚餐，他會多煎一條魚給我。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從個人經驗上升到「跨世代價值」——陪伴是最溫柔的長照</span><br>
+青銀共居讓我明白：老人家的皺紋裡藏著故事，年輕人的活力可以帶來希望。跨世代之間最美好的事，就是互相陪伴。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">衝突→和解</span><span class="theory-tag">具體例子</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>109 年：我想開設一家這樣的店</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「否定式定義」破題——不賣商品、只賣安靜——馬上讓讀者好奇</span><br>
+在城市忙碌的街道上，我想開一家不賣東西的店——只賣「安靜」的「解憂時光屋」。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：先寫空間細節讓讀者「看見」那家店，再用一個具體的客人故事讓讀者「感受到」那家店的意義</span><br>
+我幻想中的店面不大，大概只有十坪，但每一樣東西都是精心挑選的。進門左邊是一面書牆，上面放的都不是暢銷書，而是那種可以翻很久的老書。右邊有兩張懶骨頭沙發，旁邊的小茶几上放著一壺熱茶和一盞黃色的閱讀燈。門口的風鈴是木頭的，有人推門進來的時候，聲音很低、很溫潤。我想像有一天，一個穿著西裝的上班族走進來，他的襯衫領口鬆開了幾顆釦子，看起來剛加完班。他坐在沙發上，拿起一本詩集，翻了幾頁之後就閉上眼睛。他沒有說話，但我知道他在這裡找到了他需要的東西——十分鐘的安靜。當他離開的時候，腳步好像變輕了。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：不追求偉大，而是追求「溫柔的存在」——小夜燈的比喻讓人感到溫暖</span><br>
+這家店不會讓我賺大錢，但它會是城市裡的一盞小夜燈。讓每個壓力很大的人，都有一個可以暫時靠岸的地方。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">具體想像</span><span class="theory-tag">溫暖結尾</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>110 年：未成功的物品展覽會</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「翻轉」破題——大家都在展覽成功，我偏要展覽失敗</span><br>
+世界上有好多展覽都在展示「成功」，但我想辦一場「未成功」的展覽。第一個展品，就是那座被我摔壞又修好的機器人模型。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「過程細節」累積情感——存錢、組裝、期待、失敗——越具體越能讓讀者感受你的投入與失落</span><br>
+那個機器人是我存了三個月的零用錢買的。我每天放學回家就坐在書桌前組裝，螺絲起子、小夾子、說明書攤了一整桌。組裝的過程比我想像中難很多——有一顆比米粒還小的螺絲我弄丟了三次，馬達的線怎麼接都不對。但我很享受那種專注的感覺，好像全世界只剩下我跟這座機器人。最後一天，就差最後一步——裝上電池，測試能不能動。我的手在發抖，小心翼翼地把電池放進去，按下開關。機器人動了大概三秒，然後「喀」一聲，不動了。我檢查了半天，發現是其中一個齒輪被我裝反了，而那個齒輪在機器的最深處，要拆掉全部才能重來。我坐在散了一桌的零件前面，眼眶發熱，但沒有哭。我只是靜靜地看著那些零件，想著：如果重來一次，我會更小心嗎？還是會犯一樣的錯？</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：重新定義「未成功」——不是失敗的證明，而是成長的化石</span><br>
+未成功不是失敗，而是成長的痕跡。那些裂痕記錄了我努力的過程，比任何獎盃都還要真實、還要珍貴。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">翻轉（失敗→成長）</span><span class="theory-tag">具體物品</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>111 年：多做多得</h3>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「時代現象」破題——效率時代多做＝吃虧——然後說「有一次經驗改變了我」</span><br>
+在什麼都要講效率的時代，「多做」好像就是吃虧。但有一次經驗，完全改變了我的想法。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從「不甘願」寫到「發現意義」——用一個偶然的發現（考卷上的「加油」）作為轉折點</span><br>
+那天放學前，導師突然叫我：「等一下留下來幫我整理教室。」我當下心裡超不情願——為什麼是我？又不是我一個人弄亂的。同學們一個個背起書包走了，我一個人留下來擦黑板、排桌椅、掃地。我一邊掃一邊嘀咕，覺得自己倒楣透了。掃到最後一排的時候，我看到抽屜裡有一張被揉爛的考卷，上面用紅筆寫了「加油」兩個字，旁邊還畫了一個小小的笑臉。我突然想到，老師每天都要改幾十份考卷、處理班上大大小小的事，她一定比我們還累，但她從來沒有抱怨過。我默默地把那張考卷攤平放好，繼續掃地。後來的幾個月，我開始主動幫忙：發聯絡簿、幫同學撿掉在地上的筆、在放學前檢查窗戶有沒有關好。我發現，多做這些小事並不會讓我少一塊肉，反而讓我覺得自己好像長大了一點。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「看不見的存款」比喻——把抽象的道理包裝成具體的意象</span><br>
+多做表面上吃虧，其實是為自己存下看不見的存款。那些不求回報的付出，最後都會用你想不到的方式回來找你。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">翻轉（吃虧→收穫）</span></p>
+        </div>
+
+        <div class="topic-card gsh">
+            <h3>112–114 年：最新會考題型</h3>
+            <p><span class="label label-body">112 年：圖表題</span>從長條圖分析台灣人最愛的電影類型。數據不會說謊，但需要一個會解讀的腦袋。</p>
+            <p><span class="label label-outro">結尾</span>看懂圖表背後的意義，比看懂數字更重要——這是現代公民的基本能力。</p>
+            <p><span class="label label-body">113 年：六則標題</span>分析聳動標題的設計手法。學會看穿標題的修辭，不被「震驚！」給騙了。</p>
+            <br>
+<p><span class="label label-outro">結尾</span>標題是通往內容的窗戶，但不該是扭曲內容的哈哈鏡。</p>
+            <p><span class="label label-body">114 年：倉鼠圖＋6 詞彙</span>倉鼠在滾輪上一直跑，看似前進，其實只是在原地打轉——這不就像我們嗎？</p>
+            <p><span class="label label-outro">結尾</span>真正的自由，是發現自己在滾輪上，然後勇敢地跳下來。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">圖表判讀</span><span class="theory-tag">象徵</span><span class="theory-tag">層次翻轉</span></p>
+        </div>
+    </div>
+
+    <!-- ============ TAB 2: 高中學測專區 ============ -->
+    <div id="Tab2" class="tabcontent" role="tabpanel" aria-hidden="true">
+        <h2><span class="level-badge level-senior">高中</span> 學測國寫：四維矩陣（進階版）</h2>
+        <div class="intro-box senior-box">
+            <p><strong>給高中生：</strong>學測國寫分「知性題」（理性論證）與「情意題」（感性抒發）。四維矩陣可靈活套用——知性題強化第二、三維（定錨與論證），情意題強化第四維（層次翻轉）。</p>
+            <p>以下矩陣用更精煉、更具分析性的語言呈現，協助你在有限時間內建構深度論述。</p>
+        </div>
+
+        <div class="matrix-step senior">
+            <h4>① 語意邊界與命題限制</h4>
+            <p>將題目「碎化」為語意單位，精準劃定寫作邊界：</p>
+            <ul>
+                <li><strong>名詞／主體：</strong>題目要求你處理的核心對象為何？（記憶力、寬容、玩物、大數據⋯⋯）</li>
+                <li><strong>動詞／關係：</strong>你與該對象之間的互動方式。（「我看見」、「我們這個時代」、「我想要擁有」——主體性不同）</li>
+                <li><strong>形容詞／限制詞：</strong>⭐ 命題的隱形條件，決定題意的彈性範圍。「<mark>未成功</mark>」與「<mark>我希望擁有</mark>」分別界定了書寫的時態與可能性。</li>
+            </ul>
+        </div>
+
+        <div class="matrix-step senior">
+            <h4>② 價值衝突與議題定錨</h4>
+            <p>知性題的本質是「價值衝突的論證」。拿到題目後，先辨析其中的二元張力：</p>
+            <div class="table-wrapper"><table>
+                <tr><th>題目</th><th>衝突軸線</th><th>議題層次</th></tr>
+                <tr><td>玩物喪志／養志</td><td>效率紀律 vs 創意熱情</td><td>教育哲學、勞動倫理</td></tr>
+                <tr><td>福爾摩斯與華生</td><td>理性邏輯 vs 感性關懷</td><td>認知風格、專業倫理</td></tr>
+                <tr><td>大數據與隱私</td><td>便利效率 vs 個人自主</td><td>科技倫理、數位人權</td></tr>
+                <tr><td>他者理論</td><td>自我利益 vs 他者責任</td><td>倫理學、社會連帶</td></tr>
+            </table></div>
+            <p><strong>寫作策略：</strong>前半段分析 A 面（衝突、困境、現狀問題），經由轉折（數據、案例、個人經驗）導向 B 面（辯證、修補、超越）。</p>
+        </div>
+
+        <div class="matrix-step senior">
+            <h4>③ 載體選擇與象徵賦予</h4>
+            <p>無論知性題或情意題，都需要具體「載體」來承載抽象概念：</p>
+            <ul>
+                <li><strong>大題小作：</strong>宏觀命題（「我們這個世代」、「自由」）→ 微觀切入（家庭餐桌上的手機、一次被拒絕的經驗）</li>
+                <li><strong>小題大作：</strong>微觀物件（「冰箱」、「花草的氣味」）→ 象徵賦予（冰箱是凍結時間的容器、氣味是記憶的鑰匙）</li>
+                <li><strong>知性題的載體策略：</strong>用具體案例或數據來承載論證，避免空泛說理</li>
+            </ul>
+        </div>
+
+        <div class="matrix-step senior">
+            <h4>④ 層次翻轉與審美昇華</h4>
+            <p>⭐ 區別 A 級與 B+ 級的關鍵。末段必須完成從「物理層次」到「哲理層次」的跳躍。</p>
+            <p>核心句型：<mark>「這表面上是（事件／現象），實際上卻指向（更深層的命題）。」</mark></p>
+            <div class="table-wrapper"><table>
+                <tr><th>題目</th><th>物理層次</th><th>哲理層次</th></tr>
+                <tr><td>樂齡出遊</td><td>老人家的旅遊規畫</td><td>老化社會中的世代共融與尊嚴</td></tr>
+                <tr><td>標籤現象</td><td>我們愛幫人貼標籤</td><td>大腦的簡化機制vs理解他者的倫理責任</td></tr>
+            </table></div>
+        </div>
+
+        <div class="matrix-step senior">
+            <h4>知性題的中間段結構</h4>
+            <p>學測知性題的本質是「有觀點的論證」。中間段不是單純說故事，而是要用例子證明你的立場。提供兩種實戰結構：</p>
+            <p><strong>方法一：正反對比論證</strong></p>
+            <ul>
+                <li><strong>正面案例：</strong>先舉一個符合你立場的例子，建立論證基調。<br>
+                    <em>例（標籤現象）：</em>「國中時我跟一位被貼標籤的同學同組，才發現他其實很有才華——標籤讓我差點錯過一個好朋友。」</li>
+                <li><strong>反面案例：</strong>再舉一個缺乏該條件的案例，形成張力。<br>
+                    <em>例：</em>「反觀網路上，一個未經查證的標籤就能毀掉一個人。去年某位老師被學生惡意剪輯影片，『恐龍教授』的標籤讓他百口莫辯。」</li>
+                <li><strong>論證收束：</strong>一句話點出對比的結論：「標籤的殺傷力不在於分類，而在於分類之後我們不再思考。」</li>
+            </ul>
+            <p><strong>方法二：三例遞進法</strong></p>
+            <ul>
+                <li><strong>例子①（個人微觀）：</strong>親身經驗，建立情感連結與可信度</li>
+                <li><strong>例子②（社會中觀）：</strong>新聞時事、社會現象，擴展論證格局</li>
+                <li><strong>例子③（經典宏觀）：</strong>文學典故、歷史案例、學術觀點，提升論述層次</li>
+            </ul>
+            <p class="ref-tip">💡 三例從「我」→「我們」→「人類」，格局遞增，展現思考的深度與廣度。</p>
+        </div>
+
+        <h3>📋 學測國寫實例（107–115 年）</h3>
+
+        <div class="topic-card ceec">
+            <h3>107 學測：記憶力</h3>
+         <br>
+   <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「反問」開場，直接點出核心矛盾——便利vs失去</span><br>
+現代人習慣將大腦外包給雲端，遇到問題先問 Google，這讓我們失去了什麼？當記憶不再需要被鍛鍊，我們與知識之間的關係也變得脆弱而功利。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「個人實驗」（一天不用Google）作為具體案例，從生活現象推導到理論反思</span><br>
+朋友聚餐時，一道菜上桌，大家的第一反應不是動筷子，而是拿出手機「讓手機先吃」。我們記不住任何一支電話號碼，卻能精準記得哪個 App 的 icon 是什麼顏色。幾個月前，我試著挑戰「一天不使用 Google」——想一個字想不起來，不准查，只能用力想。結果我花了三分鐘才想起「尷尬」兩個字怎麼寫。這個經驗讓我不禁思考：當我們把記憶外包給雲端，我們的大腦是否正在「去能化」？記憶不只是儲存，更是將片段串聯成知識網絡的過程——沒有記憶的鍛鍊，就很難有深度的理解與創新的聯想。</p>
+         <br>
+   <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：不否定數位工具，而是提出「區分」——哪些該記、哪些該查，才是真正素養</span><br>
+記憶力衰退並非單純的「變笨」，而是人類認知模式在數位時代的結構性轉變。與其焦慮記不住，不如學會區分「需要記得的事」與「可以查詢的事」——這才是數位時代真正的記憶素養。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">議題分析</span><span class="theory-tag">層次翻轉</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>108 學測：圖表與寬容</
+h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「圖表數據」和「現實矛盾」的落差破題，建立論述張力</span><br>
+在這個高喊多元價值的時代，我們真的變得更寬容了嗎？圖表顯示人們對「不同」的接受度提高，但社群平台的同溫層效應卻說明了相反的故事。</p<br>
+>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「個人經驗（封鎖朋友）」作為案例，再引用書中一句話作為理論支撐</span><br>
+去年暑假，我跟一個政治立場完全不同的朋友大吵了一架。他覺得我「被洗腦」，我覺得他「不願面對現實」。我們在 Messenger 上打字，越打越快、越打越氣，最後我封鎖了他。後來我在一本書上讀到一句話：「如果你無法用對方的語言描述對方的立場，你就沒有真正理解他。」那句話像一巴掌打醒了我。真正的寬容不是「我同意你」，而是「我不同意你，但我願意坐下來聽你說完整個故事」。社群媒體的演算法讓我們只看得到同溫層，每一次滑掉不喜歡的貼文、每一次封鎖意見不同的人，都在讓我們的寬容<br>
+肌肉萎縮。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：重新定義「寬容」——不是沒有衝突，而是有能力把衝突轉化為理解</span><br>
+寬容的界線不在於「接納多少不同」，而在於能否在差異中保持對話的意願。一個真正寬容的社會，不是沒有衝突，而是有能力把衝突轉化為建設性的理解。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">政治三立場</span><span class="theory-tag">定義與區分</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>109 學測：玩物喪志／<br>
+養志</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「千年古訓」和「創意時代」的對比，點出核心衝突——玩的意義正在被重新定義</span><br>
+「業精於勤，荒於嬉」是千年古訓，但到了創意經濟的時代，「玩」與「志」的關係需要被重新定義——真正的問題<br>
+不是玩不玩，而是怎麼玩。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「表弟的故事」作為案例，從經驗提煉出「主動vs被動」的判斷標準</span><br>
+我的表弟從小喜歡打電動，大人們總是搖頭說「只會玩，以後怎麼辦」。但他為了看懂日文遊戲的劇情，自學了五十音和基礎文法；為了在遊戲中設計機關，去學了紅石電路的邏輯——那是 Minecraft 裡的一種基本程式設計。上高中後，他加入了資訊社，現在已經能寫簡單的遊戲程式。他的例子讓我思考：「玩」跟「志」的界線在哪裡？我認為關鍵在於——你是在被動地被娛樂消耗，還是在主動地探索、創造、反思。當你在玩的過程中提出問題、試圖理解背後原理<br>
+、甚至想做出屬於自己的東西時，玩就不再只是玩。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：提出「玩物的極致就是成就」的翻轉觀點——從對立走向統一</span><br>
+玩樂是人類探索世界的本能。當熱情與紀律結合，玩物不僅不會喪志，反而能成就非凡之志——那些改變世界的人，往往只是把「玩」這件事做到了極致。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">對立統一</span><span class="theory-tag">重新定義</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+ <br>
+           <h3>110 學測：大數據</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「演算法比你更了解你」的誘人說法作為鉤子，再用反問戳破它</span><br>
+大數據時代，我們每個人都被化約為一串串精準的數位足跡。<br>
+演算法比你更了解你自己——但這種「了解」是真的了解嗎？</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從日常經驗（Netflix推薦）出發，層層推演到更大的結構性問題</span><br>
+前陣子我打開 Netflix，它推薦給我的每一部片都是「根據你的觀看紀錄」挑選的。我有點毛骨悚然——我只是看了兩部科幻片，它就已經把我歸類了。更讓我在意的是，它永遠只推薦我「可能喜歡」的東西，於是我永遠看不到那些「我可能不知道自己會喜歡」的東西。同樣的道理，當求職平台用演算法篩選履歷、當銀行用信用評分決定是否放款、當社群媒體用按讚數決定什麼內容會被更多人看到——我們正在被數據定義，卻很少意識到<br>
+這件事。數據告訴我們「人們做了什麼」，但永遠無法回答「人們為什麼這麼做」。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：指出數據的「能力邊界」——能回答What，無法回答Why</span><br>
+大數據告訴我們「人們做了什麼」，卻無法告訴我們「人們為什麼這麼做」。在數據與人性之間，我們需要的不只是演算法，更是人文的判斷力——這是機器無法取代的領域。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">現代主義向內轉</span><span class="theory-tag">科技反思</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>111 學測：樂齡出遊</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「高鐵速度」比喻老化速度，讓讀者感受到問題的迫切性</span><br>
+台灣正以高鐵速度邁入超高齡社會。「樂齡出遊」不只是旅遊規畫的問題，更是一個社會如何對待老化的縮影。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「奶奶的日常」作為具體載體，從個人經驗擴展到都市空間的結構性問題</span><br>
+我奶奶今年七十八歲，膝蓋不好，走一小段路就要停下來喘口氣。但她每天早上還是堅持自己走到菜市場買菜，因為「走一走才覺得自己還活著」。有一次我陪她去，短短兩百公尺的路，我們走了快二十分鐘——她邊走邊跟鄰居打招呼、跟賣菜阿姨聊天、蹲下來摸路邊的貓。我發現，對她來說，「出門」的意義不只是移動，而是維持與這個世界的連結。然而我們的都市空間——騎樓被佔用、紅綠燈秒數太短、公車階梯太高——處處都<br>
+在告訴老年人「這裡不歡迎你」。樂齡旅遊不只是玩，它是一面鏡子，照出一個社會願不願意為每一個人留出空間。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從「旅遊」提升到「尊嚴」——樂齡不是玩，而是文明程度的指標</span><br>
+樂齡出遊的真諦不在於去了哪些景點，而在於——即使在身體機能衰退之後，人依然有權利追求美好生活。一個文明的社會，不是沒有老人，而是讓老人都能活得有尊嚴、有樂趣。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">現實主義典型</span><span class="theory-tag">議題分析</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>112 學測：福爾摩斯與華生的三明治</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用經典角色作為「載體」，讓理性與感性的抽象對比變得具體可感</span><br>
+福爾摩斯用精密如手術刀的邏輯解剖世界，華生則用溫暖的心感受人情。這兩種認知風格看似對立，卻在每一次辦案中缺一不可。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「AI法官」的假設性案例來測試理性與感性的界線</span><br>
+我之前在網路上看到一個辯論題目：「AI 作出的判決比人類法官更公正，你是否支持？」支持方的論點很強——AI 沒有偏見、不會疲勞、不受情緒影響。但我一直在想：如果 AI 法官判一個母親有罪，它永遠無法體會那個母親在法庭上看到自己孩子時的眼神。福爾摩斯的邏輯可以推理出兇手是誰，但華生的溫暖才能理解為什麼他會走到這一步。在我們的日常生活中，這種理性與感性的角力無所不在：選擇科系時，要選<br>
+有「錢途」的還是自己喜歡的？做決策時，要靠數據分析還是直覺？我認為真正的智慧不在於選哪一邊，而在於知道什麼時候該聽從哪一邊。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「marriage」的比喻強調結合而非對立——真正的智慧來自交會</span><br>
+福爾摩斯與華生的合作告訴我們：最完整的真實，需要兩種視角的交會。在一個過度推崇效率與數據的時代，我們尤其需要提醒自己——真正的智慧，往往是理性與感性的 marriage。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">對立統一</span><span class="theory-tag">結構分析</span></p>
+        </div><br>
+
+
+        <div class="topic-card ceec">
+            <h3>113 學測：標籤現象</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從大腦機制切入——標籤不是壞事，是為了節省能量——讓論述更有層次</span><br>
+大腦為了節省運算能量，發明了「標籤」來快速分類這個複雜的世界。但標籤在帶來便利的同時，也成了偏見的載體。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「國中同學被貼標籤」的個人經驗作為案例，從個人經驗擴展到社會現象</span><br>
+還記得國中時，班上有一個同學因為身材比較胖，被取了各種難聽的綽號。奇怪的是，沒有人問過他叫什麼名字，大家只知道他叫「肥豬」。後來有一次分組報告，我跟他一組，才發現他其實很會畫畫，而且個性超幽默。我當時非常慚愧——我從來沒有想過去認識他，因為一個標籤就足以讓我停止思考「他是誰」。標籤化不是大人的專利，我們每天都在做：看到重機騎士就覺得是屁孩，看到刺青就覺得是壞<br>
+人，看到穿西裝的就覺得是業務。標籤的問題不在於分類本身——分類是大腦的正常機制——而在於「以標籤取代理解」。當你說出「他就是那種人」的時候，其實是在說「我不需要再了解他了」。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：翻轉——不是消滅標籤，而是在標籤之後再多走一步</span><br>
+超越標籤，不是要我們放棄分類，而是要在標籤之後再多走一步——去理解標籤背後那個活生生的人。每一次我們拒絕貼標籤，就是一次對複雜世界的溫柔致敬。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">定義與區分</span><span class="theory-tag">倫理轉向</span></p>
+  <br>
+      </div>
+
+        <div class="topic-card ceec">
+            <h3>114 學測：社會脈動／資訊判讀</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「後真相時代」定調，把資訊判讀定位為「民主社會的生存技能」</span><br>
+在後真相時代，假新聞的傳播速度遠比真相快得多。資訊判讀能力不再是專業素養，而是民主社會公民的生存技能。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「LINE群組假消息」的真實場景作為案例——最日常的經驗最有說服力</span><br>
+上個月，我的 LINE 群組裡有人傳了一則訊息，說某知名品牌的食物含有致癌物，還附了一張看起來很正式的截圖。群組裡好幾個人立刻開始驚慌，說「以後不敢吃了」。我看著那張截圖，總覺得哪裡不對——上面的日期格式很奇怪，而且署名單位根本不存在。我花了大約五分鐘上網查了一下，發現那則消息早在三年前就被闢謠過了。我把查證結<br>
+果貼回群組，大家鬆了一口氣，但沒有人問：「那下次要怎麼分辨？」這就是問題所在——我們太習慣「看到就信」，太不習慣「停下來想一想」。假新聞之所以可怕，不是因為它長得很像真的，而是因為我們根本沒有查證的習慣。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：把「停三秒」這個小動作提升到「民主社會的防線」</span><br>
+對抗假新聞的最終武器不是更多的資訊，而是獨立思考的習慣。在按下分享鍵之前停三秒，在相信一個說法之前問一句「這是真的嗎」——這些微不足道的習慣，就是民主社會最堅實的防線。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">文本證據</span><span class="theory-tag">解讀層次</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>115 學測：他者理論／人際責任</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:ita<br>
+lic">💡 策略：用《愛的迫降》這個流行文化作為切入點，讓抽象的理論變得可親</span><br>
+《愛的迫降》跨越了北緯 38 度線，而在現實生活中，我們是否願意跨越心中的界線去理解那個與我們不同的人？</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「捷運站街友」的親身經歷作為案例——從具體行動出發，帶出深層的倫理思考</span><br>
+去年冬天，我在捷運站出口看到一個街友蜷縮在角落，寒風一直往騎樓灌。我走過去，在他前面的紙碗裡放了一百塊。他抬起頭來跟我說謝謝，那時候我才看清楚他的臉——大概五十幾歲，滿臉風霜。我繼續走我的路，但一個念頭一直在我腦中揮之不去：他以前是做什麼的？他怎麼會變成這樣？他有家人嗎？我發現我對他的認識，就只有「街友」兩個字。這個世界每天都在發生苦難，而我們的大腦為了保護自己，發展出一種「關機機制<br>
+」——看到太多的悲慘，我們會選擇不看。但「他者理論」告訴我們：每一個「他者」都是另一個「我」。忽略別人的痛苦，最終會讓我們自己的人性也變得麻木。真正的難題在於——如何在知道自己的能力有限之後，仍然選擇去在乎。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從倫理責任提升到「生存策略」——在極化時代，理解他者是讓社會走下去的關鍵</span><br>
+在一個日益極化的世界，理解他者不只是道德選擇，更是生存策略。當我們能夠真正看見彼此，差異就不再是分裂的理由，而是豐富彼此的起點。這才是人際責任最深層的意義。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">身份政治</span><span class="theory-tag">場域論</span><span class="theory-tag">前理解</span></p>
+        </div>
+    </div>
+
+    <!-- ============ TAB 3: 破關實戰 ============ -->
+    <div id="Tab3" class="tabcontent" role="tabpanel" aria-hidden="true">
+        <h2>實戰與工具書：矩陣應用＋理論深度</h2>
+
+        <div class="practice-box">
+            <h3>🛠️ 實戰演練：以「未成功的物品展覽會」為例</h3>
+            <div class="table-wrapper"><table>
+                <tr><td>① 字面</td><td><strong>名詞：</strong>物品、展覽會 ｜ <strong>限制詞：</strong><mark>「未成功」</mark>——不能寫成功的！<br><strong>拆解結果：</strong>要寫一個「沒有成功」的東西，但把它用「展覽」的方式呈現</td></tr>
+                <tr><td>② 定錨</td><td><strong>A 面：</strong>失敗的沮喪、社會對成功的單一標準<br><strong>B 面：</strong>未成功 = 成長的養分，過程比結果重要</td></tr>
+                <tr><td>③ 素材</td><td><strong>選擇：</strong>摔壞的機器人模型<br><strong>象徵：</strong>它不是垃圾，是「成長的化石」</td></tr>
+                <tr><td>④ 翻轉</td><td><strong>末段：</strong>「未成功不是失敗的證明，而是成長的化石。那些裂痕記錄了我走過的路，比任何獎盃都更真實。」</td></tr>
+            </table></div>
+        </div>
+
+        <div class="topic-card" style="border-left-color:var(--accent);">
+            <h3>📝 範例：未成功的物品展覽會（110 年會考）</h3>
+            <p><span class=\"label label-intro\">開頭</span><br><span style=\"font-size:0.82em;color:#7f8c8d;font-style:italic\">💡 策略：用「翻轉」破題——大家都在展覽成功，我偏要展覽失敗</span><br>
+世界上有好多展覽都在展示「成功」，但我想辦一場「未成功」的展覽。第一個展品，就是那座被我摔壞又修好的機器人模型。</p>
+            <p><span class=\"label label-body\">中間</span><br><span style=\"font-size:0.82em;color:#7f8c8d;font-style:italic\">💡 策略：用「過程細節」累積情感——存錢、組裝、期待、失敗——越具體越能讓讀者感受你的投入與失落</span><br>
+那個機器人是我存了三個月的零用錢買的。我每天放學回家就坐在書桌前組裝，螺絲起子、小夾子、說明書攤了一整桌。組裝的過程比我想像中難很多——有一顆比米粒還小的螺絲我弄丟了三次，馬達的線怎麼接都不對。但我很享受那種專注的感覺，好像全世界只剩下我跟這座機器人。最後一天，就差最後一步——裝上電池，測試能不能動。我的手在發抖，小心翼翼地把電池放進去，按下開關。機器人動了大概三秒，然後「喀」一聲，不動了。我檢查了半天，發現是其中一個齒輪被我裝反了，而那個齒輪在機器的最深處，要拆掉全部才能重來。我坐在散了一桌的零件前面，眼眶發熱，但沒有哭。我只是靜靜地看著那些零件，想著：如果重來一次，我會更小心嗎？還是會犯一樣的錯？</p>
+            <p><span class=\"label label-outro\">結尾</span><br><span style=\"font-size:0.82em;color:#7f8c8d;font-style:italic\">💡 策略：重新定義「未成功」——不是失敗的證明，而是成長的化石</span><br>
+未成功不是失敗，而是成長的痕跡。那些裂痕記錄了我努力的過程，比任何獎盃都還要真實、還要珍貴。</p>
+            <p><span class=\"label label-theory\">使用技法</span><span class=\"theory-tag\">翻轉（失敗→成長）</span><span class=\"theory-tag\">具體物品</span></p>
+        </div>
+
+        <h3>💡 寫作小叮嚀</h3>
+        <ol>
+            <li><strong>前 3 分鐘用矩陣拆題</strong> — 字面→定錨→素材→翻轉，寫下關鍵字</li>
+            <li><strong>國中生注意：</strong>會考著重「生活體悟」，第四維翻轉是從 4 級分跳 5–6 的關鍵</li>
+            <li><strong>高中生注意：</strong>學測知性題強化論證與議題分析，情意題強化敘事與翻轉深度</li>
+            <li><strong>避免</strong> — 憑直覺下筆（易離題）、通篇說理無敘事（太抽象）、末段只做總結無翻轉</li>
+        </ol>
+        <div class="summary-box">🎯 四維矩陣確保你不離題；文學理論確保文章有辨識度。</div>
+        <hr style="margin:30px 0;border:none;border-top:2px dashed var(--border-color);">
+    
+        <h2>完整解題四維矩陣（不分級別）</h2>
         <div class="intro-box">
-            <p>最忌諱憑直覺下筆，這會導致容易離題或結構渙散。無論是國中會考的「生活體悟」，還是高中學測的「知性/情意思辨」，背後的命題邏輯其實是一致的。</p>
-            <p>以下整理了一套適用於各種考試的<strong>「解題四維矩陣」</strong>。這套框架就像是程式設計的 IPO 邏輯（Input-Process-Output），能幫助你在看到題目的前 3 分鐘內，迅速拆解資訊、確立核心，並搭好文章骨架。</p>
+            <p>以下為完整的四維矩陣參考手冊，包含理論細節與操作範例。</p>
+            <p>這套框架就像程式設計的 IPO 邏輯（Input-Process-Output），幫助你在前 3 分鐘拆解資訊、確立核心、搭好骨架。</p>
         </div>
 
         <div class="table-wrapper"><table>
-            <thead>
-                <tr>
-                    <th>步驟</th>
-                    <th>目的</th>
-                    <th>核心心法</th>
-                    <th>關鍵提問</th>
-                </tr>
-            </thead>
+            <thead><tr><th>步驟</th><th>目的</th><th>核心心法</th><th>關鍵提問</th></tr></thead>
             <tbody>
-                <tr>
-                    <td>一、字面拆解</td>
-                    <td>劃定寫作邊界</td>
-                    <td>拆解詞性，找出隱形限制</td>
-                    <td>主角是誰？動作是什麼？是寫過去還是未來？</td>
-                </tr>
-                <tr>
-                    <td>二、核心定錨</td>
-                    <td>建立文章張力</td>
-                    <td>尋找對立面，製造衝突轉折</td>
-                    <td>這題要考我什麼價值觀？什麼與什麼在拉扯？</td>
-                </tr>
-                <tr>
-                    <td>三、素材映射</td>
-                    <td>決定切入視角</td>
-                    <td>大題小作，小題大作</td>
-                    <td>我該用什麼具體「載體」來表現這個抽象概念？</td>
-                </tr>
-                <tr>
-                    <td>四、層次翻轉</td>
-                    <td>提升文章格局</td>
-                    <td>「表面上是 A，實際上是 B」</td>
-                    <td>這個經驗帶給我什麼更深層的生命哲理？</td>
-                </tr>
+                <tr><td>一、字面拆解</td><td>劃定寫作邊界</td><td>拆解詞性，找出隱形限制 <span class="theory-tag">文類</span><span class="theory-tag">形式</span></td><td>主角是誰？動作是什麼？寫過去還是未來？</td></tr>
+                <tr><td>二、核心定錨</td><td>建立文章張力</td><td>尋找對立面，製造衝突轉折 <span class="theory-tag">議題</span><span class="theory-tag">浪漫</span></td><td>這題考什麼價值觀？什麼與什麼在拉扯？</td></tr>
+                <tr><td>三、素材映射</td><td>決定切入視角</td><td>大題小作，小題大作 <span class="theory-tag">意識流</span><span class="theory-tag">結構</span></td><td>用什麼具體「載體」表現這個抽象概念？</td></tr>
+                <tr><td>四、層次翻轉</td><td>提升文章格局</td><td>「表面上是 A，實際上是 B」 <span class="theory-tag">雙重解讀</span><span class="theory-tag">典型</span></td><td>這個經驗帶來什麼更深層的生命哲理？</td></tr>
             </tbody>
         </table></div>
 
-        <h3>四個步驟詳細操作方法：</h3>
+        <h3>四個步驟詳細操作方法</h3>
 
         <div class="matrix-step">
             <h4>第一維：字面拆解（找出邊界與條件）</h4>
-            <p>不要只看整體，要把題目「碎化」為詞彙，確保你沒有漏掉任何限制條件。</p>
-            <ul>
-                <li><strong>名詞（找主體）：</strong>決定你要描寫的核心物件或主題。例如：「新冰箱」、「縫隙」。</li>
-                <li><strong>動詞（找關係）：</strong>決定你與主體之間的互動方式。例如：「打開課本」、「看見傳統習俗」。</li>
-                <li><strong>形容詞/限制詞（找調性）：</strong>這是最容易被忽略的得分關鍵。例如：「未成功的物品」（不能寫成功的）、「我希望擁有的時光」（代表現在還沒有）。</li>
-            </ul>
+            <p>不要只看整體，要把題目「碎化」為詞彙</p>
+            <div class="table-wrapper"><table>
+                <thead><tr><th>詞性</th><th>作用</th><th>範例</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>名詞</strong>（找主體）</td><td>決定核心描寫物件</td><td>「新冰箱」、「縫隙」</td></tr>
+                    <tr><td><strong>動詞</strong>（找關係）</td><td>決定與主體的互動方式</td><td>「打開課本」、「看見傳統習俗」</td></tr>
+                    <tr><td><strong>形容詞/限制詞</strong>（找調性）</td><td>⭐ 最容易被忽略的得分關鍵</td><td>「未成功的物品」（不能寫成功的）、「我希望擁有的時光」（代表現在還沒有）</td></tr>
+                </tbody>
+            </table></div>
         </div>
 
         <div class="matrix-step">
             <h4>第二維：核心定錨（尋找對立面）</h4>
-            <p>高分的文章絕對不能是一灘死水，必須要有「張力」。出題老師其實都在測試你如何處理兩種矛盾的價值觀。拿到題目，先問自己：<mark>「這題的兩面性是什麼？」</mark></p>
-            <ul>
-                <li>「多做多得」 &rarr; 表面吃虧（勞累） vs 實質獲得（成長、經驗）。</li>
-                <li>「捨不得」 &rarr; 對過往的依戀 vs 面對未來的必然放手。</li>
-                <li>「青銀共居」 &rarr; 世代差異的衝突 vs 互相理解的包容。</li>
-            </ul>
-            <p style="background-color: #fdf2e9; padding: 10px; border-radius: 4px;"><strong>💡 寫作策略：</strong>文章的前半段寫 A 面（困境、衝突、表面），經過轉折後，後半段走向 B 面（體悟、和解、深層）。</p>
+            <p>高分文章必須有<strong>張力</strong>——出題老師在測試你如何處理矛盾的價值觀。</p>
+            <div class="table-wrapper"><table>
+                <thead><tr><th>題目</th><th>A 面（表面困境）</th><th>B 面（深層體悟）</th></tr></thead>
+                <tbody>
+                    <tr><td>「多做多得」</td><td>表面吃虧（勞累）</td><td>實質獲得（成長、經驗）</td></tr>
+                    <tr><td>「捨不得」</td><td>對過往的依戀</td><td>面對未來的必然放手</td></tr>
+                    <tr><td>「青銀共居」</td><td>世代差異的衝突</td><td>互相理解的包容</td></tr>
+                </tbody>
+            </table></div>
+            <p><strong>寫作策略：</strong>前半段寫 A 面（困境、衝突），經轉折後走向 B 面（體悟、和解）。</p>
         </div>
 
         <div class="matrix-step">
             <h4>第三維：素材映射（找具體載體）</h4>
-            <p>很多學生寫不好是因為「太抽象」。必須將題目映射到具體的生活經驗中。</p>
-            <ul>
-                <li><strong>大題小作（對付寬泛的題目）：</strong>當題目很大（例如：「我們這個世代」、「自由」），你絕對不能通篇說理。必須找一個「極小的切入點」。例如寫「我們這個世代」，切入點可以是「家庭餐桌上各自滑手機的除夕夜」。</li>
-                <li><strong>小題大作（對付具體物件的題目）：</strong>當題目很小（例如：「如果我有一座新冰箱」、「花草的氣味」），你不能只停留在物理層面。必須把物件賦予「象徵意義」。例如把「冰箱」放大為「凍結逝去時光與記憶的容器」。</li>
-            </ul>
+            <div class="table-wrapper"><table>
+                <thead><tr><th>策略</th><th>適用場合</th><th>做法</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>大題小作</strong></td><td>寬泛題目（「我們這個世代」）</td><td>找極小切入點，如「家庭餐桌上各自滑手機的除夕夜」</td></tr>
+                    <tr><td><strong>小題大作</strong></td><td>具體物件題目（「冰箱」）</td><td>賦予象徵意義，如將冰箱放大為「凍結逝去時光的容器」</td></tr>
+                </tbody>
+            </table></div>
         </div>
 
         <div class="matrix-step">
             <h4>第四維：層次翻轉（寫出昇華與餘韻）</h4>
-            <p>這是區別 A 級分與 B 級分的絕對關鍵。末段絕不能只做簡單的內容總結，必須提出「本質上的翻轉」。請在心裡套用這個句型：<mark>「這表面上是（物理現象/事件），實際上卻是（心理狀態/哲理）。」</mark></p>
-            <ul>
-                <li>「從陌生到熟悉」：表面上是學會了騎腳踏車，實際上是克服了對未知的恐懼，認識了更勇敢的自己。</li>
-                <li>「縫隙的聯想」：表面上是森林中樹葉間的空隙，實際上是現代人在高壓生活中，必須刻意為自己留下的喘息空間。</li>
-            </ul>
+            <p>⭐ 區別 A 級分與 B 級分的絕對關鍵。</p>
+            <p>套用句型：<strong>「這表面上是（物理事件），實際上卻是（心理狀態/哲理）。」</strong></p>
+            <div class="table-wrapper"><table>
+                <thead><tr><th>題目</th><th>表面</th><th>實際</th></tr></thead>
+                <tbody>
+                    <tr><td>「從陌生到熟悉」</td><td>學會騎腳踏車</td><td>克服對未知的恐懼，認識更勇敢的自己</td></tr>
+                    <tr><td>「縫隙的聯想」</td><td>森林中樹葉間的空隙</td><td>現代人在高壓生活中必須留下的喘息空間</td></tr>
+                </tbody>
+            </table></div>
         </div>
+
+        <div class="summary-box">四維矩陣給你骨架，文學理論給你血肉。兩者結合才是高分作文完全體。</div>
+            </div>
+    <!-- ============ TAB 4: 文學理論 × 矩陣 ============ -->
+    <div id="Tab4" class="tabcontent" role="tabpanel" aria-hidden="true">
+<hr style="margin:30px 0;border:none;border-top:2px dashed var(--border-color);">
+
+        <h2>文學理論 × 四維矩陣：進階交叉應用</h2>
+        <div class="intro-box">
+            <p>將 literary-analysis skill 的 37 章文學理論工具，對應到四維矩陣的每一維。寫作時先決定用哪一維，再從下方挑選適用的理論工具來深化。</p>
+        </div>
+        <div class="dimension-nav">
+            <a href="#t4d1">① 字面拆解</a>
+            <a href="#t4d2">② 核心定錨</a>
+            <a href="#t4d3">③ 素材映射</a>
+            <a href="#t4d4">④ 層次翻轉</a>
+        </div>
+
+        <div id="t4d1" class="matrix-step">
+            <h4>第一維「字面拆解」的進階武器</h4>
+            <div class="tool-grid">
+                <div class="tool-item"><h4>📚 文類規則</h4><div class="meta">第六章</div><p>拆題判斷適合散文還是小說？不同文類素材策略完全不同。</p></div>
+                <div class="tool-item"><h4>🎭 形式與內容</h4><div class="meta">第二章</div><p>題目給的「內容」固定，但可透過選擇「形式」創造獨特性。</p></div>
+                <div class="tool-item"><h4>✒️ 風格識別</h4><div class="meta">第四章</div><p>「持續偏離平均值」——如果全班寫阿嬤的毛衣，你要不要偏離？</p></div>
+                <div class="tool-item"><h4>⏹️ 1+1 原則</h4><div class="meta">第28章</div><p>釐清題目有幾個事件、幾個主詞動詞組合，確保不漏條件。</p></div>
+            </div>
+        </div>
+        <div id="t4d2" class="matrix-step">
+            <h4>第二維「核心定錨」的進階武器</h4>
+            <div class="tool-grid">
+                <div class="tool-item"><h4>📋 議題分析</h4><div class="meta">第19章</div><p>「議題就是一群人的煩惱」——把個人衝突放大到公共議題。</p></div>
+                <div class="tool-item"><h4>⚖️ 政治三立場</h4><div class="meta">第五章</div><p>①必須介入②完全中立③場域超越，多一層思考維度。</p></div>
+                <div class="tool-item"><h4>🌹 浪漫主義激情</h4><div class="meta">第七章</div><p>A/B 面的核心——「追求理想即使失敗也崇高」。</p></div>
+                <div class="tool-item"><h4>📹 自然主義不介入</h4><div class="meta">第24章</div><p>與其說教，不如冷靜呈現事實讓讀者感受。</p></div>
+                <div class="tool-item"><h4>🧩 解讀×評價×喜好</h4><div class="meta">第33章</div><p>釐清是客觀衝突、價值判斷還是個人偏好？決定寫作態度。</p></div>
+            </div>
+        </div>
+        <div id="t4d3" class="matrix-step">
+            <h4>第三維「素材映射」的進階武器</h4>
+            <div class="tool-grid">
+                <div class="tool-item"><h4>🌀 意識流自由聯想</h4><div class="meta">第一章</div><p>找到樞紐意象後，用自由聯想串聯記憶、情感、畫面。</p></div>
+                <div class="tool-item"><h4>🏗️ 結構分析三步驟</h4><div class="meta">第15章</div><p>①重要元素②功能③關係——三步讓素材不流水帳。</p></div>
+                <div class="tool-item"><h4>🔲 純文學區分思維</h4><div class="meta">第20章</div><p>與其想「是什麼」，不如想「不是什麼」。⭐ 區分比定義有創造力。</p></div>
+                <div class="tool-item"><h4>🔮 現代主義向內轉</h4><div class="meta">第21章</div><p>把外在物體轉為內在風景——不是描寫它長怎樣，而是它讓你感受到什麼。</p></div>
+                <div class="tool-item"><h4>🧠 前理解</h4><div class="meta">第22章</div><p>素材對不同讀者效果不同。考慮閱卷者的「前理解」。</p></div>
+                <div class="tool-item"><h4>🎯 品味刻度</h4><div class="meta">第九章</div><p>「花開的時間」vs「咳嗽的時間」——質感夠精細嗎？</p></div>
+            </div>
+        </div>
+        <div id="t4d4" class="matrix-step">
+            <h4>第四維「層次翻轉」的進階武器 ⭐</h4>
+            <div class="tool-grid">
+                <div class="tool-item"><h4>🌹 楊逵雙重解讀 ⭐</h4><div class="meta">第32章</div><p>表面寫事件，實際寫哲理——同一段文字有表面和深層兩種解讀。</p></div>
+                <div class="tool-item"><h4>🎭 不可靠敘事者</h4><div class="meta">第二章</div><p>用「裝傻」讓讀者自己從蛛絲馬跡看破。</p></div>
+                <div class="tool-item"><h4>🎪 後結構主義</h4><div class="meta">第11章</div><p>文章不必只有一個解讀。好的翻轉讓不同讀者讀出不同層次。</p></div>
+                <div class="tool-item"><h4>✅ 矛盾×合身原則</h4><div class="meta">第八章</div><p>檢驗翻轉：①與前文矛盾？②夠具體？「讓我學會珍惜」太泛。</p></div>
+                <div class="tool-item"><h4>👤 典型人物</h4><div class="meta">第23章</div><p>把個人經驗提升為典型——為一群人的共同經驗發聲。</p></div>
+                <div class="tool-item"><h4>🔍 文本證據雙向</h4><div class="meta">第16章</div><p>大膽假設（翻轉）→小心求證（前文有鋪墊嗎？）。否則 = 過度解讀。</p></div>
+            </div>
+        </div>
+        <div class="summary-box"><strong>一句話：</strong>四維矩陣給你骨架，37 章文學理論給你血肉。</div>
     </div>
 
-    <!-- 第二個頁籤：國中會考作文 -->
-    <div id="Tab2" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab2-label">
-        <h2>國中會考作文（104-114 年）</h2>
-        <!-- 此處內容與先前的國中會考實例相同，為節省長度不變動結構 -->
-        <div class="topic-card">
-            <h3>104 年：捨不得</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>人的雙手容量有限，抓緊了過往，便空不出手來擁抱未來。那件靜靜躺在抽屜深處的舊毛衣，早已穿不下，卻承載著外婆的體溫與我童年的依賴，讓我遲遲捨不得丟棄。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>敘事：</strong>具體描寫該物品/習慣的細節，以及它對自己的特殊意義。</li><li><strong>轉折：</strong>描述面臨「必須捨去」的現實衝突（如搬家、成長、生病），以及內心的掙扎與拉扯。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>捨不得，是因為愛得太深；但也唯有學會放下，才能讓愛以另一種形式延續。我將毛衣摺好捐出，因為我明白，外婆的溫暖早已織進我的靈魂，不再需要實物來證明。</div>
-        </div>
-        <div class="topic-card">
-            <h3>105 年：從陌生到熟悉</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>所有的得心應手，都曾經過一段笨拙的陣痛期。看著如今在琴鍵上飛舞的雙手，我不禁想起三年前，面對那宛如龐然大物般的鋼琴時，內心那份充滿敬畏的陌生感。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>初始：</strong>描寫接觸新事物（如技能、環境、朋友）時的生疏、恐懼或挫折感。</li><li><strong>過程：</strong>寫出克服困難的具體轉折點（一次練習、一句鼓勵），以及熟練度逐漸提升的喜悅。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>從陌生到熟悉的這條路，是用汗水與堅持鋪成的。這段旅程不僅讓我收穫了一項新技能，更讓我明白：永遠不要害怕未知的起點，因為每一次的陌生，都是通往全新自我的大門。</div>
-        </div>
-        <div class="topic-card">
-            <h3>106 年：在這樣的傳統習俗裡，我看見______</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>爆竹聲中一歲除，春風送暖入屠蘇。在除夕夜熱氣騰騰的圍爐煙火中，我看見的不僅是年夜飯的豐盛，更看見了現代社會中日益稀缺的「家族凝聚力」。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>感官描寫：</strong>細緻描寫該習俗（如掃墓、媽祖遶境、湯圓）的畫面、聲音與氣味。</li><li><strong>深度反思：</strong>透過長輩的動作或參與者的神情，提煉出習俗背後的精神（如傳承、感恩、信仰的安定力量）。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>傳統習俗並非食古不化的儀式，而是先人留給我們的溫柔提醒。在快速變遷的時代裡，這些習俗就像一根根無形的線，將我們與過去的根緊緊相連，讓我們在漂泊中依然知道自己從何而來。</div>
-        </div>
-        <div class="topic-card">
-            <h3>107 年：我們這個世代</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>我們是伴隨著 Wi-Fi 與觸控螢幕長大的一代，被稱為「數位原住民」。我們的手指能在螢幕上快速滑動出千言萬語，但有時卻在現實的飯桌上面對面相顧無言。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>特徵描繪：</strong>寫出這個世代的優勢（資訊豐富、思想多元、勇於發聲）。</li><li><strong>困境反思：</strong>點出世代的隱憂（容貌焦慮、資訊碎片化、缺乏耐心與真實連結）。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>每個世代都有專屬的考驗與使命。我們這個世代不該只是在虛擬網路中狂歡，更該學會用數位工具解決真實世界的難題，在光纖的冷硬中，找回屬於人類的溫度。</div>
-        </div>
-        <div class="topic-card">
-            <h3>108 年：青銀共居</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>青春的躁動與老年的沉靜，看似是兩條平行線，卻在「青銀共居」的屋簷下產生了奇妙的交集。這不僅是一種解決居住問題的社會實驗，更是一場跨越半個世紀的生命對話。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>刻板印象與衝突：</strong>描寫初期生活習慣的差異（早起 vs 熬夜、科技盲 vs 數位狂）。</li><li><strong>破冰與互補：</strong>青年教導長者使用智慧型手機，長者與青年分享人生閱歷與拿手菜，形成互利與理解。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>皺紋裡藏著智慧，青春裡滿是活力。青銀共居打破了年齡的孤島，讓我們看見：陪伴是最溫柔的長照，而傾聽，則是跨世代之間最美的語言。</div>
-        </div>
-        <div class="topic-card">
-            <h3>109 年：我想開設一家這樣的店</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>在車水馬龍的城市街角，我想開設一家不賣實體商品，只販售「安靜」的店——「解憂時光屋」。在這裡，沒有 Wi-Fi，沒有時鐘，只有泛黃的書頁與淡淡的茶香。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>店內裝潢與理念：</strong>具體描述店面的空間佈置，營造氛圍。</li><li><strong>客人群像與互動：</strong>描寫一位疲憊的上班族或迷惘的學生走進店裡，在這裡獲得喘息與救贖的故事。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>這家店或許無法讓我大富大貴，但它會是城市裡的一盞恆溫小夜燈。只要這家店存在一天，就能為那些在喧囂中迷失的靈魂，提供一個暫時靠岸的避風港。</div>
-        </div>
-        <div class="topic-card">
-            <h3>109 補考：為這些人規劃一個網路節目</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>在光鮮亮麗的網紅圈之外，有一群默默支撐著城市運作卻不被看見的人。我想為這群「深夜勞動者」規劃一個名為《星光下的齒輪》的網路節目，讓他們的汗水在螢幕前閃耀。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>節目企劃：</strong>介紹單元設計（如實境跟拍清潔工、訪談大夜班超商店員）。</li><li><strong>預期影響：</strong>透過這些故事，打破大眾的職業偏見，喚起社會同理心與尊重。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>鏡頭不該只對準金字塔頂端，更該照亮社會的基石。《星光下的齒輪》不為追求百萬點擊，只為在每一次按下播放鍵時，能在觀眾心中種下一顆溫柔與感恩的種子。</div>
-        </div>
-        <div class="topic-card">
-            <h3>110 年：未成功的物品展覽會</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>多數的展覽館都為「成功」加冕，但我想策劃一場「未成功的物品展覽會」。展廳正中央，放著一張我考了不及格的數學考卷，上面佈滿了塗改的淚痕，它不完美，卻真實得閃閃發光。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>物品故事：</strong>詳細敘述準備該次考試（或比賽/手作）付出的心血，以及最終失敗的打擊。</li><li><strong>意義翻轉：</strong>解釋為何將其視為展品。失敗的物品證明了「我曾經拼命嘗試過」，是成長的墊腳石。</li></ul></div>
-            <div class="paragraph"><span class="label label-outro">末段</span>未成功，不代表失敗，只是「還沒抵達終點」。這場展覽會沒有華麗的獎盃，卻有滿滿的勇氣。看著這些未成功的物品，我們終將學會原諒自己的不完美，並帶著它們繼續前行。</div>
-        </div>
-        <div class="topic-card">
-            <h3>110 補考：我希望擁有的一段時光</h3>
-            <div class="paragraph"><span class="label label-intro">首段</span>若時間能像膠卷般任意剪輯，我最渴望擁有的，是一段「全然留白」的時光。不用追趕行事曆上的死線，也不必回應手機裡的未讀訊息，就只是純粹地與自己獨處。</div>
-            <div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>現實對照：</strong>描寫現階段課業或生活帶來的壓迫感與喘不過氣。</li><li><strong>時光內容：</strong>在這段時光裡，我要去山林裡聽風，或是單粹地在窗前看一整個下午的雲，感受生命本質的跳動。</li></ul></div>
+    <button id="backToTop" onclick="scrollToTop()" aria-label="回到頂端">▲</button>
 
-<div class="paragraph"><span class="label label-outro">末段</span>這段留白的時光並非逃避現實，而是為了更長遠的跋涉而蓄力。當靈魂在寂靜中吸飽了氧氣，我便能以更堅定的步伐，重新走入那喧鬧而真實的世界。</div>
-</div>
-<div class="topic-card">
-<h3>111 年：多做多得</h3>
-<div class="paragraph"><span class="label label-intro">首段</span>在凡事講求性價比的速食時代，「多做」常被視為吃虧的代名詞。然而，有些收穫是無法用計算機按出來的；當我自告奮勇接下那份無人問津的班級幹部職務時，我才真正體會到「多做多得」的真諦。</div>
-<div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>事件經過：</strong>描述承擔額外責任時遇到的繁瑣與疲憊，甚至遭到同學的不理解。</li><li><strong>無形收穫：</strong>寫出在過程中培養出的溝通能力、抗壓性，以及意外獲得的友誼與成就感。</li></ul></div>
-<div class="paragraph"><span class="label label-outro">末段</span>「得」不應狹隘地定義為物質報酬，經驗、磨練與心靈的豐盈，才是最昂貴的資產。不要害怕多做，因為那些看似白流的汗水，最終都會化為滋養我們人生根基的養分。</div>
-</div>
-<div class="topic-card">
-<h3>111 補考：偏心</h3>
-<div class="paragraph"><span class="label label-intro">首段</span>天平的兩端很難永遠保持絕對的水平，人際關係中的「偏心」亦是如此。小時候，我總嫉妒母親對體弱多病的弟弟偏心；直到長大後我才明白，那份偏心裡藏著的是無奈與更深沉的愛。</div>
-<div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>事件衝突：</strong>敘述具體感到不公的事件（如資源分配、責罵標準不同），以及內心的委屈。</li><li><strong>視角轉換：</strong>透過一次意外的觀察或對話，理解對方「偏心」的背後理由（弱者更需要保護），學會同理。</li></ul></div>
-<div class="paragraph"><span class="label label-outro">末段</span>真正的公平，並非給予每個人一模一樣的東西，而是給予每個人他們最「需要」的。理解了偏心背後的苦心，我不再要求絕對的平齊，而是學會用寬容的心，去接納愛的不同形狀。</div>
-</div>
-<div class="topic-card">
-<h3>112 年：圖表題：台灣民眾最喜愛的電影類型</h3>
-<div class="paragraph"><span class="label label-intro">首段</span>從長條圖的起伏中，我們窺見的不僅是票房數據，更是當代台灣社會的心靈切片。動作片與喜劇片的遙遙領先，折射出現代人在高壓生活下，急需透過大銀幕尋求感官刺激與情緒出口的集體渴望。</div>
-<div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>數據分析：</strong>解讀為何動作/喜劇受歡迎（舒壓），而紀錄片/文藝片較小眾（需耗費心神）。</li><li><strong>個人選擇：</strong>論述我自己最喜歡的類型（例如科幻片），探討它如何拓展我的想像邊界，或幫助我反思現實。</li></ul></div>
-<div class="paragraph"><span class="label label-outro">末段</span>電影是造夢的藝術，也是時代的鏡子。無論選擇在喜劇中大笑，還是在紀錄片中沉思，只要走出戲院時，我們對生活多了一份熱愛或理解，這兩個小時的光影之旅便擁有了無可取代的價值。</div>
-</div>
-<div class="topic-card">
-<h3>113 年：六則標題設計分析</h3>
-<div class="paragraph"><span class="label label-intro">首段</span>「震驚！不看會後悔！」在資訊爆炸的年代，我們每天都被無數聳動的標題轟炸。這些精心包裝的文字誘餌，雖然成功攫取了眼球，卻也正悄悄剝奪我們深度思考的能力。</div>
-<div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>現象剖析：</strong>挑選圖表中的特定標題類型（如製造焦慮型、誇大不實型），分析其背後的商業邏輯與心理學機制。</li><li><strong>危害與反思：</strong>指出標題殺人、斷章取義造成的社會對立，強調閱聽人應具備「識讀能力」。</li></ul></div>
-<div class="paragraph"><span class="label label-outro">末段</span>別讓大腦成為浮誇標題的跑馬場。在點擊之前停下三秒鐘，培養批判性思維，我們才能在喧囂的資訊洪流中，做一個清醒的掌舵者，而非被流量操弄的木偶。</div>
-</div>
-<div class="topic-card">
-<h3>114 年：倉鼠圖＋6 詞彙</h3>
-<div class="paragraph"><span class="label label-intro">首段</span>在滾輪上奮力奔跑的倉鼠，看似自由無拘，實則被困在一個名為「安全」的牢籠裡。這幅畫面，宛如許多現代人的縮影：為了追求穩定的生活，我們盲目地在舒適圈裡打轉，卻忘了籠子外還有廣闊的天地。</div>
-<div class="paragraph"><span class="label label-body">中間段方向</span><ul><li><strong>圖文連結：</strong>運用詞彙（盲目地耽溺於日常，把牢籠當作歸宿）。</li><li><strong>破局思考：</strong>寫出覺醒的過程。唯有勇敢做出選擇，承擔未知的冒險，才能打破現狀，找回真正的自由。</li></ul></div>
-<div class="paragraph"><span class="label label-outro">末段</span>真正的自由，從來不是毫無風險的安逸，而是擁有選擇走向風雨的勇氣。跳下那永無止境的滾輪吧！哪怕籠外的世界充滿荊棘，那也是屬於我們自己，真實而壯闊的生命軌跡。</div>
-</div>
-</div>
-<!-- 第三個頁籤：學測國寫 -->
-<div id="Tab3" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab3-label">
-<h2>學測國寫（107-115 年）</h2>
-<p style="color: #555; font-style: italic; margin-bottom: 20px;">學測因為分「知性」與「情意」，兩者寫作策略完全不同。知性題講求邏輯論證與思辨；情意題講求畫面感與情感共鳴。</p>
-<!-- 學測實例不變 -->
-<div class="topic-card gsh">
-<h3>107 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：記憶力】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>現代人習慣將大腦外包給雲端，遇到問題先問 Google，這究竟是記憶力的衰退，還是大腦功能的進化？我認為，網路並未摧毀記憶，而是改變了我們記憶的「模式」。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>分析題幹數據（人們更傾向記住「哪裡找」而非「內容本身」）。論述這是大腦適應資訊爆炸的結果；將機械性記憶交給科技，人類應專注於資訊的「整合與創新」。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>科技是記憶的義肢，而非大腦的替代品。只要我們保有判斷與融會貫通的能力，搜尋引擎就會是我們最強大的圖書館，而非使大腦萎縮的毒藥。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：季節的感思】</h4>
-
-<div class="paragraph"><span class="label label-intro">首段</span>季節的更迭，是大自然寫給大地最浪漫的詩。楊牧筆下的春是生機，而我獨愛初秋。當第一陣微涼的秋風拂過街角的台灣欒樹，我知道，那是歲月在提醒我們：沉澱的時刻到了。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>具體描寫秋天的感官（空氣的冷冽、欒樹由黃轉紅的色彩）。結合個人生命經驗（例如：某個秋天面臨升學挫折，從落葉中體悟到「失去是另一種新生」）。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>四季循環往復，生命亦有枯榮。季節教會我的，不是悲秋傷春，而是坦然接受每一個階段的自己。在每一個清冷的秋日裡，我都更加堅定地蓄積冬眠後的溫暖。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>108 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：圖表與寬容】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>在這個高喊多元價值的時代，我們真的變得更寬容了嗎？社群媒體的演算法，往往將我們困在同溫層裡，面對異見，我們更習慣於封鎖而非傾聽。真正的寬容，比想像中艱難。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>解讀圖表背後的社會差異。舉例論證：網路霸凌或世代對立。指出寬容的條件是「認知到差異的合理性」，並願意放下成見進行對話。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>寬容不是鄉愿地同意一切，而是堅定自身立場的同時，誓死捍衛他人發言的權利。唯有推倒心中的柏林圍牆，這座島嶼才能真正走向共榮。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：溫暖的心】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>城市的高樓越蓋越高，人與人之間的距離卻似乎越來越遠。然而，即使在最冷漠的鋼筋水泥裡，只要有一顆溫暖的心，就能融化防備的冰霜，點亮一隅光明。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>敘述一次真實的經歷（例如：雨天在公車上沒零錢，陌生人默默替自己投幣；或是自己鼓起勇氣幫助別人的瞬間）。刻畫那一刻內心的悸動與善意的漣漪。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>溫暖的心，是會傳染的。孟子說「惻隱之心，人皆有之」，我們不需要做拯救世界的英雄，只要願意在別人撐傘時順手遞過雨柄，這世界就不會太過寒冷。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>109 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：玩物喪志/養志】</h4>
-
-<div class="paragraph"><span class="label label-intro">首段</span>「業精於勤，荒於嬉」是千古古訓，但到了創意為王的現代，玩物真的必然喪志嗎？我認為，關鍵不在於「玩什麼」，而在於「怎麼玩」；有意識的把玩，恰是培養熱情的溫床。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>界定「喪志」與「養志」的差異。沉溺於感官刺激而荒廢正業是喪志；但若能從組裝模型中學會空間結構，或從遊戲中研究程式邏輯，那便是養志。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>玩樂，是人類探索世界的本能。我們不該抹殺玩心，而應提升「玩」的層次。當熱情與深度結合，玩物不僅不會喪志，反能成就非凡之志。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：感性想像】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>現實是一座四面楚歌的圍城，而想像力，是唯一能帶我們飛越城牆的翅膀。在枯燥的數學課堂上，只要我閉上眼，窗外的麻雀便能幻化為載我翱翔宇宙的星際飛船。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>描寫一個專屬的奇幻想像情境（例如：將自己的內心世界具象化為一座會隨著情緒變換氣候的島嶼）。寫出想像力如何在低潮時提供心理慰藉與修復。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>愛因斯坦曾說：「想像力比知識更重要。」感性的想像並非逃避現實的白日夢，它是靈魂的擴音器。因為敢於想像，我們才有力量去將現實塑造成理想的模樣。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>110 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：大數據】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>大數據時代，我們每個人都被化簡為一串串精準的數位足跡。演算法比我們更懂自己的喜好，這看似帶來了無與倫比的便利，卻也悄悄編織了一張侵犯隱私與抹殺個體差異的巨網。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>論述大數據的兩面性。正面：醫療預測、交通優化；反面：資訊繭房、價格歧視、剝奪人類的偶然性與選擇權。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>數據是冷的，但人是活的。在享受大數據帶來的便利時，我們必須堅守科技倫理的底線。不要讓自己成為演算法的奴隸，保有主動思考的能力，才是人類不被代碼取代的最後防線。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：如果我有一座新冰箱】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>冰箱，是現代家庭保存食物的冰冷巨獸。但如果我有一座特製的新冰箱，我不想用它來冰鎮可樂或隔夜菜；我想用它，凍結那些正在歲月中悄悄流逝的珍貴記憶。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>運用具象化手法，寫出想放進冰箱的三樣「抽象物品」（例如：阿嬤身上快要消散的明星花露水香味、十七歲夏天的蟬鳴、一次不遺憾的擁抱）。寫出對時間流逝的無力感。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>然而，冰箱終究只能保鮮，無法讓時光倒流。與其試圖凍結過去，不如趁著氣味未散、溫度尚存時，好好品嚐當下的每一口酸甜苦辣。最好的保存方式，不是冰封，而是銘記在心。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>111 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：樂齡出遊】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>台灣正以高鐵般的速度邁入超高齡社會。「樂齡出遊」不再只是年輕人帶著長輩走馬看花的盡孝儀式，而是一場需要重新定義「無障礙」與「尊嚴」的社會設計。</div>
-
-<div class="paragraph"><span class="label label-body">中間段</span>分析年輕人與長者對旅遊期待的落差。提出具體建議：硬體上的友善設施（廁所、步道），與軟體上的心理同理（行程留白、不催促、讓長輩有參與規劃的成就感）。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>規劃一趟好的樂齡出遊，其實就是在為未來的自己鋪路。當我們學會放慢腳步，用長者的視角重新丈量世界的廣度，這不僅是一趟旅行，更是世代間最深刻的陪伴。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：當我打開課本】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>多數時候，課本是沉重的十字架，壓得我們喘不過氣。但在某個陽光斜灑的午後，當我靜下心來打開那本邊緣泛黃的歷史課本，密密麻麻的鉛字竟幻化成千軍萬馬，帶著我穿越了時空。</div>
-
-<div class="paragraph"><span class="label label-body">中間段</span>聚焦一門特定的學科（如歷史、國文或生物）。寫出課本知識與現實生命的碰撞（例如：讀到蘇軾的貶謫，對應到自己落榜的挫折，從中汲取豁達的生命哲學）。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>當我打開課本，我打開的不再只是應付考試的工具，而是一扇通往廣袤宇宙的窗。那些曾經死板的知識，在與生命經驗交融後，終將化為指引我前行的星光。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>112 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：福爾摩斯與華生的三明治】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>福爾摩斯用精密如手術刀的邏輯解剖世界，華生則用溫暖如爐火的感性擁抱人性。若人生是一份三明治，我會選擇以福爾摩斯的理性為基底麵包，夾入華生的感性作為豐富內餡。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>分析兩種態度的優劣：純粹理性會流於冷酷，純粹感性會流於盲目。舉實際例子論證（如處理人際衝突或面對社會議題時），為何需要先冷靜分析（理），再以同理心溝通（情）。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>理智讓我們走得正確，情感讓我們走得長遠。在複雜紛擾的現代社會中，唯有兼具福爾摩斯的清明智眼與華生的溫柔心腸，我們才能品嚐到人生最完整的滋味。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：花草樹木的氣味記憶】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>人類的五官中，嗅覺最是不講道理。它能瞬間擊穿時間的厚壁，將人拉回遙遠的過去。每當初夏微雨後，空氣中浮現那抹淡淡的七里香，我便知道，自己又回到了童年外婆家的院子裡。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>深入描繪一種特定的植物氣味（七里香/桂花/樟樹）。將氣味與具體的人事物連結（例如：外婆在樹下為我搖扇的微風、揉碎葉片時辛香中帶苦的成長體悟）。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>外婆已經不在了，院子也改建成了高樓。但那抹七里香的氣味，成了我靈魂深處最牢固的錨。只要這縷香氣還在記憶中飄盪，那些逝去的美好就從未真正離開。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>113 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：標籤現象】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>大腦為了節省運算能量，發明了「標籤」來快速分類複雜的世界。標籤讓我們迅速辨識危險與同類，但當我們將標籤無情地貼在活生生的人身上時，它便成了一堵傲慢的偏見之牆。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>論證標籤的正反面：正面是認知效率；反面是刻板印象（如「草莓族」、「理工男」）。分享自身被貼標籤的經驗，以及它帶來的限制與傷害。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>人是立體而多面的宇宙，絕非幾個單薄的詞彙所能概括。我們應當保有撕下標籤的自覺，在「分類」之外，多留一分了解對方的耐心。因為看見，才是理解的開始。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：縫隙的聯想】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>參天巨木若緊密相連，底層的植被便會因缺乏日照而枯萎；唯有樹冠間留有縫隙，陽光才能穿透，孕育生機。大自然如此，我們被塞滿待辦事項的人生，又何嘗不是如此？</div>
-<div class="paragraph"><span class="label label-body">中間段</span>從森林縫隙轉化為「生活中的縫隙」。敘述一段疲於奔命的日子，因為一次偶然的「停頓」（如錯過一班公車而抬頭看見絕美的夕陽），體悟到留白的重要性。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>太過滿載的靈魂是飛不起來的。學會在緊繃的日常中為自己鑿出一道道縫隙，讓風吹進來，讓光透進來。那些看似無用的喘息片刻，往往才是生命中最豐饒的沃土。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>114 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：社會脈動/資訊判讀】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>在後真相時代，假新聞的傳播速度遠比真相快得多。我們活在資訊的汪洋中，卻常常因為缺乏辨識的羅盤，而渴死在名為「民粹與偏激」的鹹水裡。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>分析假資訊氾濫的原因（演算法推波助瀾、人類獵奇心理）。提出解方：不輕易按讚轉發、查證多方消息來源，並保持「讓子彈飛一會兒」的冷靜。</div>
-
-<div class="paragraph"><span class="label label-outro">末段</span>資訊自由不代表可以放棄思考的責任。當螢幕上的文字試圖挑起我們的憤怒與恐懼時，請先按下心中的暫停鍵。唯有全民具備批判性思維的免疫力，民主社會的根基才不會被謠言蠶食。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：52 赫茲】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>在浩瀚的深海裡，有一隻名為 Alice 的鯨魚，牠發出的 52 赫茲音波，超出了同類的接收範圍。牠的歌聲沒有人聽懂，牠的孤獨震耳欲聾。在青春的某些時刻，我也曾是那隻游不出寂寞的 52 赫茲。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>具體寫出一段感到「格格不入」的生命經驗（例如：堅持一個冷門的夢想、對某件事抱持不合群的觀點）。描寫不被理解的痛苦，以及學會接受自身獨特性的轉折。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>與其降頻去迎合大眾的合唱，不如勇敢地唱好自己的獨角戲。52 赫茲雖然孤獨，卻是世上獨一無二的頻率。我相信，只要我不停止歌唱，在汪洋的某處，總會有一雙懂得欣賞的耳朵。</div>
-</div>
-</div>
-<div class="topic-card gsh">
-<h3>115 學測</h3>
-<div style="margin-bottom: 15px;">
-<h4 style="color: #d35400;">【知性：他者理論/人際責任】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>《愛的迫降》跨越了北緯 38 度線，而在現實生活中，我們與「他者」之間也劃滿了無形的界線。哲學家列維納斯說，當我們與他者的「臉」相遇，倫理責任便隨之降臨；這正是打破冷漠社會的終極解答。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>解釋他者理論：看見別人的脆弱，喚醒自身的道德感。舉例論述：對待社會邊緣人、外籍移工等「他者」，我們不能只視而不見，而應正視彼此的共同人性，承擔起休戚與共的責任。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>沒有人是一座孤島。勇敢跨越舒適圈的邊界，去注視那些與我們截然不同的臉孔吧。當我們願意向「他者」伸出雙手，我們拯救的不僅是對方，更是日漸乾涸的自己。</div>
-</div>
-<hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;">
-<div>
-<h4 style="color: #27ae60;">【情意：隔在我們之間的種種……】</h4>
-<div class="paragraph"><span class="label label-intro">首段</span>人心是最奇妙的建築師，總能用偏見、驕傲與恐懼，在無形中砌起一道道高牆。隔在我和父親之間的，不是千山萬水，而是一句遲遲說不出口的對不起，以及那些硬生生吞回肚裡的關心。</div>
-<div class="paragraph"><span class="label label-body">中間段</span>刻畫一段具體的人際隔閡（如親子間因價值觀不同的冷戰）。細膩描寫牆兩邊的心理狀態：明明彼此在乎，卻因為愛面子或缺乏換位思考而互相刺傷。</div>
-<div class="paragraph"><span class="label label-outro">末段</span>牆壁可以阻擋風雨，卻也阻擋了擁抱。拆除心中的高牆，往往只需要一個人先放下武裝，遞出一塊名為「理解」的磚頭。隔在我們之間的種種，終將在願意傾聽的柔情中，化作連結彼此的堅實橋梁。</div>
-</div>
-</div>
-</div>
-<!-- 第四個頁籤：破關實戰與叮嚀 -->
-<div id="Tab4" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab4-label">
-<h2>實戰演練與叮嚀：作文破關指南</h2>
-<div class="intro-box" style="border-left-color: #8e44ad; background-color: #f4ecf7;">
-<p>其實，拆解作文題目就像是在打遊戲破關。我們不要背什麼複雜的矩陣，只要記住這四個<strong>「破關步驟」</strong>，你就能在拿到考卷的三分鐘內，迅速想好要寫什麼。</p>
-</div>
-<div class="matrix-step" style="border-left: 5px solid #e74c3c;">
-<h4 style="color: #c0392b;">1. 第一招：圈出「遊戲規則」（抓關鍵字）</h4>
-<p>千萬別連規則都沒看懂就衝。拿到題目第一件事，不是發呆，是拿筆把主角、動作跟限制圈出來。很多學長姐考砸，都是因為沒看清楚「隱藏條件」。</p>
-<ul>
-<li><strong>找限制條件：</strong>如果題目是「未成功的物品展覽會」，你千萬不能寫一個最後大成功的獎盃，那就直接出局了。</li>
-<li><strong>找關鍵動作：</strong>題目是「打開課本」，你的文章裡一定要有「打開」這個動作帶給你的瞬間感受，不能整篇都在講課本裡的知識。</li>
-</ul>
-</div>
-<div class="matrix-step" style="border-left: 5px solid #f39c12;">
-
-<h4 style="color: #d35400;">2. 第二招：找出「大魔王」（製造反差感）</h4>
-<p>沒有轉折的故事超無聊。你看的電影如果主角一出場就無敵，從頭贏到尾，是不是很無聊？寫作文也一樣，高分作文一定要有「內心的小劇場」或是「反差感」。拿到題目先問自己：這題裡面，哪兩件事情在打架？</p>
-<ul>
-<li><strong>遇到「多做多得」：</strong>不要從頭到尾都寫「我很熱心我好棒」。要先寫「多做其實很吃虧又很累」（這是魔王），再寫「但最後我發現收穫其實是用錢買不到的經驗」（這是打倒魔王）。</li>
-<li><strong>遇到「捨不得」：</strong>要寫「理智上知道該丟」跟「感情上卻放不下」這兩邊的拉扯。</li>
-</ul>
-</div>
-<div class="matrix-step" style="border-left: 5px solid #27ae60;">
-<h4 style="color: #16a085;">3. 第三招：切換「特寫鏡頭」（找個小東西當主角）</h4>
-<p>範圍越大的題目，越要寫得小。高一最常犯的毛病就是「講大道理」。請把你自己當成電影導演，遇到很大的題目，你要把鏡頭「拉近」，拍一個超級具體的小畫面。</p>
-<ul>
-<li><strong>大題小作：</strong>如果題目是「我們這個世代」（超大），你不要整篇講網路科技。你要拍一個特寫：「除夕夜的飯桌上，長輩在看電視，我們這桌五個表兄弟姐妹低頭滑 IG，沒有人講話」。這樣畫面馬上就出來了。</li>
-<li><strong>小題大作：</strong>如果題目是「新冰箱」（超小），你不能真的只寫冰凍水餃。你要把它當作魔法道具：「如果冰箱可以冰凍『時間』或『回憶』就好了」。</li>
-</ul>
-</div>
-<div class="matrix-step" style="border-left: 5px solid #2980b9;">
-<h4 style="color: #2c3e50;">4. 第四招：開大絕招（表面上...其實是...）</h4>
-<p>結尾千萬不要只寫「總而言之」。這是讓閱卷老師覺得「哇，這小孩有深度」的必殺技。在最後一段，請你在心裡默念這個神奇句型：<mark>「這表面上是 ＯＯＯ，但其實是 ＸＸＸ。」</mark></p>
-<ul>
-<li><strong>以「從陌生到熟悉」為例：</strong>「表面上，我只是熟悉了怎麼彈吉他；但其實，我是克服了遇到困難就想逃避的自己。」</li>
-<li><strong>以「縫隙的聯想」為例：</strong>「表面上，那是樹葉之間透光的空隙；但其實，那是我們在快要喘不過氣的讀書生活中，必須留給自己的休息時間。」</li>
-</ul>
-</div>
-<div class="practice-box">
-<h3>🛠️ 實戰演練：以「未成功的物品展覽會」為例</h3>
-<p>讓我們用這套「破關指南」快速跑一次思維流程：</p>
-<ul>
-<li><strong>字面拆解：</strong>限制：必須是「未成功」的（失敗的、半途而廢的），必須是一個具體的「物品」，必須要有「展覽」的儀式感。</li>
-<li style="margin-top: 10px;"><strong>核心定錨（找對立）：</strong>主流社會對「成功」的追捧 vs 個體對「失敗痕跡」的珍視。</li>
-<li style="margin-top: 10px;"><strong>素材映射（找載體）：</strong>選擇一個具體物品：一張只差兩分就及格、佈滿立可白痕跡的檢定考卷；或是一個因為發酵失敗而塌陷的醜麵包。</li>
-<li style="margin-top: 10px;"><strong>層次翻轉（昇華）：</strong>表面上這是一場展示「失敗」的展覽；實際上，這些未成功的物品，正是我們曾經「奮力嘗試過」的證據。失敗不是終點，而是邁向成功的墊腳石。</li>
-</ul>
-<p style="margin-top: 15px; color: #2c3e50; font-weight: bold;">透過這套框架，原本無從下筆的題目，瞬間就能轉化為一條清晰的邏輯線路。</p>
-</div>
-<div class="practice-box" style="border-color: #f39c12; margin-top: 30px;">
-<h3 style="color: #e67e22;">💡 寫作小叮嚀</h3>
-<p><strong>高中作文一點都不難，它就是考驗你能不能把平凡的生活小事，看出不一樣的道理。</strong></p>
-
-<p>考試時無法寫出這麼字斟句酌的文句，這些段落的價值在於<strong>「提供你思考的破題角度」</strong>以及<strong>「段落佈局的骨架」</strong>。建議你可以挑幾個自己比較沒把握的題目，試著用自己的話把「中間段」的細節填滿，這會是非常好的考前練筆！</p>
-</div>
-</div>
-<div id="backToTop" role="button" tabindex="0" aria-label="回到頂端" title="回到頂端">↑</div>
-<script>
-(function() {
-  var tabNames = ['Tab1', 'Tab2', 'Tab3', 'Tab4'];
-  var tabEls = {};
-  var panelEls = {};
-
-  // Collect elements
-  tabNames.forEach(function(name) {
-    tabEls[name] = document.querySelector('.tablinks[aria-controls="' + name + '"]');
-    panelEls[name] = document.getElementById(name);
-  });
-
-  function activateTab(tabName, updateHash) {
-    // Hide all panels, deselect all tabs
-    tabNames.forEach(function(name) {
-      panelEls[name].style.display = 'none';
-      panelEls[name].setAttribute('aria-hidden', 'true');
-      tabEls[name].className = tabEls[name].className.replace(' active', '');
-      tabEls[name].setAttribute('aria-selected', 'false');
-    });
-
-    // Show selected
-    panelEls[tabName].style.display = 'block';
-    panelEls[tabName].setAttribute('aria-hidden', 'false');
-    tabEls[tabName].className += ' active';
-    tabEls[tabName].setAttribute('aria-selected', 'true');
-    tabEls[tabName].focus();
-
-    if (updateHash !== false) {
-      history.replaceState(null, '', '#' + tabName);
-    }
-  }
-
-  // Expose globally for onclick
-  window.openTab = function(evt, tabName) {
-    activateTab(tabName);
-  };
-
-  // Keyboard navigation (← / →)
-  var tabList = document.querySelector('.tab');
-  tabList.addEventListener('keydown', function(e) {
-    var current = document.querySelector('.tablinks.active');
-    if (!current) return;
-    var idx = tabNames.indexOf(current.getAttribute('aria-controls'));
-    if (idx === -1) return;
-
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      e.preventDefault();
-      var next = (idx + 1) % tabNames.length;
-      activateTab(tabNames[next]);
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      e.preventDefault();
-      var prev = (idx - 1 + tabNames.length) % tabNames.length;
-      activateTab(tabNames[prev]);
-    }
-  });
-
-  // Load from hash on page load
-  function initFromHash() {
-    var hash = location.hash.replace('#', '');
-    if (tabNames.indexOf(hash) !== -1) {
-      activateTab(hash, false);
-    } else {
-      // Default: Tab4
-      activateTab('Tab4', false);
-    }
-  }
-
-  // Listen for hash changes (browser back/forward)
-  window.addEventListener('hashchange', function() {
-    var hash = location.hash.replace('#', '');
-    if (tabNames.indexOf(hash) !== -1) {
-      activateTab(hash, false);
-    }
-  });
-
-  // Back to top button
-  var backBtn = document.getElementById('backToTop');
-  backBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  backBtn.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
-
-  var scrollTimer;
-  window.addEventListener('scroll', function() {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
-      if (window.scrollY > 300) {
-        backBtn.classList.add('visible');
-      } else {
-        backBtn.classList.remove('visible');
-      }
-    }, 100);
-  }, { passive: true });
-
-  initFromHash();
-})();
-</script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].setAttribute("aria-hidden", "true");
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].setAttribute("aria-selected", "false");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).setAttribute("aria-hidden", "false");
+            evt.currentTarget.className += " active";
+            evt.currentTarget.setAttribute("aria-selected", "true");
+            window.location.hash = tabName;
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            var hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                var btn = document.querySelector('button[onclick*="'+hash+'"]');
+                if (btn) btn.click();
+            } else {
+                var d = document.getElementById("defaultOpen");
+                if (d) d.click();
+            }
+        });
+        window.addEventListener('scroll', function() {
+            var btn = document.getElementById('backToTop');
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    </script>
 </body>
 </html>
