@@ -1,0 +1,19 @@
+name: check
+
+# 靜態守門員：標記配對、標題階層、殘留逃脫字元、年度題目一致性、SEO/資源、對比度、外部連結。
+# 這些都是實際發生過的問題（110 會考標籤樣式整組失效、108/110/114 年度題目錯配、古文 8 個死連結）。
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: 靜態檢查（含外部連結）
+        run: node tools/check.mjs --links
