@@ -15,5 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: 靜態檢查（含外部連結）
-        run: node tools/check.mjs --links
+      # 不在 CI 加 --links：外部網站（大考中心、GitHub）偶發 403/timeout 會造成假紅燈，
+      # 連結健康度請在本機或發佈前跑 `node tools/check.mjs --links`。
+      - name: 靜態檢查
+        run: node tools/check.mjs

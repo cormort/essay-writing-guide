@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cormort.github.io/essay-writing-guide/sitemap.xml
