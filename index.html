@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高分作文解題策略與實例分析</title>
-    <meta name="description" content="四維矩陣 × 國中生/高中生雙版本 × 會考(104-114) × 學測(107-115) — 完整範文與破題策略">
-    <meta property="og:title" content="高分作文解題策略與實例分析">
-    <meta property="og:description" content="四維矩陣 × 國中會考(104-114) × 學測國寫(107-115)完整範文 — 分級閱讀版本">
+    <title>高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115</title>
+    <meta name="description" content="四維矩陣 × 國中生/高中生雙版本：國中會考寫作（104–115，含 115「賦予事物新面貌」）× 學測國寫知性題與情意題（107–115，含 115「臉」與「隔在我們之間的種種」）完整範文、破題策略與文學理論工具。">
+    <link rel="canonical" href="https://cormort.github.io/essay-writing-guide/">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="color-scheme" content="light">
+    <meta name="author" content="cormort">
+    <meta property="og:title" content="高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115">
+    <meta property="og:description" content="四維矩陣 × 分級閱讀：會考寫作（104–115）× 學測國寫知性題／情意題（107–115）完整範文與破題策略。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cormort.github.io/essay-writing-guide/">
     <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="高分作文解題策略與實例分析">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115">
+    <meta name="twitter:description" content="會考寫作 × 學測國寫：四維矩陣、歷屆範文、文學理論工具與破題策略。">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": "高分作文解題策略與實例分析",
+      "description": "國中會考寫作（104–115）與學測國寫（107–115）的四維矩陣解題法、歷屆範文與文學理論工具。",
+      "inLanguage": "zh-TW",
+      "learningResourceType": "教學指南",
+      "educationalLevel": ["國中", "高中"],
+      "teaches": ["會考寫作測驗", "學測國語文寫作能力測驗（知性題／情意題）"],
+      "url": "https://cormort.github.io/essay-writing-guide/",
+      "isAccessibleForFree": true,
+      "author": { "@type": "Person", "name": "cormort" }
+    }
+    </script>
     <style>
         :root {
             --primary: #2c3e50; --secondary: #34495e; --accent: #3498db;
@@ -180,26 +203,45 @@
         .practice-box table { margin: 10px 0; }
         .practice-box td:first-child { font-weight: bold; white-space: nowrap; width: 60px; }
         .ref-tip { font-size: 0.85em; color: #7f8c8d; font-style: italic; margin: 5px 0; }
+        .skip-link {
+            position: absolute; left: -9999px; top: 0; background: var(--primary); color: #fff;
+            padding: 10px 16px; border-radius: 0 0 6px 0; z-index: 2000; text-decoration: none;
+        }
+        .skip-link:focus { left: 0; }
+        .topic-card, .topic-card h3, .matrix-step, .practice-box { scroll-margin-top: 12px; }
+        .site-footer {
+            margin-top: 26px; padding: 16px 18px; border-top: 2px solid var(--border-color);
+            color: #5d6d7e; font-size: 0.85em; line-height: 1.7;
+        }
+        .site-footer a { color: var(--accent); }
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+        }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">跳至主要內容</a>
     <h1>📝 高分作文解題策略與實例分析</h1>
-    <p class="subtitle">四維矩陣 × 分級閱讀 × 國中會考(104-114) × 學測國寫(107-115)</p>
+    <p class="subtitle">四維矩陣 × 分級閱讀 × 國中會考寫作(104–115) × 學測國寫(107–115)</p>
 
     <div class="tab" role="tablist" aria-label="作文主題分頁">
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab1" onclick="openTab(event, 'Tab1')" id="defaultOpen"><span class="level-badge level-junior">國中</span> 會考專區</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab2" onclick="openTab(event, 'Tab2')"><span class="level-badge level-senior">高中</span> 學測專區</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab3" onclick="openTab(event, 'Tab3')" >實戰與工具書</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab4" onclick="openTab(event, 'Tab4')">文學理論 × 四維矩陣</button>
-        <button class="tablinks" role="tab" aria-selected="false" aria-controls="Tab5" onclick="openTab(event, 'Tab5')">📖 會考學測常見古文30篇</button>
+        <button class="tablinks" role="tab" id="tab-Tab1" aria-selected="true" aria-controls="Tab1"><span class="level-badge level-junior">國中</span> 會考專區</button>
+        <button class="tablinks" role="tab" id="tab-Tab2" aria-selected="false" aria-controls="Tab2"><span class="level-badge level-senior">高中</span> 學測專區</button>
+        <button class="tablinks" role="tab" id="tab-Tab3" aria-selected="false" aria-controls="Tab3">實戰與工具書</button>
+        <button class="tablinks" role="tab" id="tab-Tab4" aria-selected="false" aria-controls="Tab4">文學理論 × 四維矩陣</button>
+        <button class="tablinks" role="tab" id="tab-Tab5" aria-selected="false" aria-controls="Tab5">📖 會考學測常見古文30篇</button>
     </div>
 
+    <div id="main" tabindex="-1">
+
     <!-- ============ TAB 1: 國中會考專區 ============ -->
-    <div id="Tab1" class="tabcontent" role="tabpanel" aria-hidden="true">
+    <div id="Tab1" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab-Tab1">
         <h2><span class="level-badge level-junior">國中</span> 會考作文：四維矩陣（簡單版）</h2>
         <div class="intro-box junior-box">
             <p><strong>給國中生：</strong>看到作文題目先不要急著下筆！用下面這四個步驟，3 分鐘就能打好文章的骨架。</p>
             <p>4 個步驟就像蓋房子：先打地基 → 再立柱子 → 然後砌牆 → 最後裝潢。照著順序做，文章就會穩穩的。</p>
+            <p>📌 <strong>最新年度：</strong><a href="#g115">115 年「賦予事物新面貌」範文與寫法</a>（題幹不必自己命題，重點是「做法要具體」）</p>
         </div>
 
         <div class="matrix-step junior">
@@ -268,7 +310,7 @@
             <p class="ref-tip">💡 三個例子從「自己」→「身邊」→「世界」，越寫越大，分數也越高！</p>
         </div>
 
-        <h3>📋 國中會考實例（104–114 年）</h3>
+        <h3>📋 國中會考實例（104–115 年）</h3>
 
         <div class="topic-card gsh">
             <h3>104 年：捨不得</h3>
@@ -369,14 +411,27 @@
             <p><span class="label label-outro">結尾</span>真正的自由，是發現自己在滾輪上，然後勇敢地跳下來。</p>
             <p><span class="label label-theory">技法</span><span class="theory-tag">圖表判讀</span><span class="theory-tag">象徵</span><span class="theory-tag">層次翻轉</span></p>
         </div>
+
+        <div class="topic-card gsh" id="g115">
+            <h3>115 年：賦予事物新面貌</h3>
+            <p><span class="label label-body">題目</span>題幹提供 3 則示例——園遊會用「以物換物」取代金錢買賣、老牆上的花磚改造成杯墊、盛產的香蕉做成新產品——要你想想：生活中有什麼事物只要加入巧思、翻新樣式或加入新元素，就能長出別的用途。<strong>題目不必自己命題</strong>，要你寫出「想賦予什麼事物新面貌」、<strong>做法</strong>，並抒發感受與想法。</p>
+            <p><span class="label label-intro">開頭</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「本來要丟掉的東西」開場，一句話就建立「舊 → 新」的反差</span><br>
+後陽台那臺阿公留下的舊腳踏車，輪胎早就沒氣了，車架上爬滿了鏽斑。媽媽說要請回收車載走，我卻捨不得——在我眼裡，它不是廢鐵，而是一臺等著被重新發明的車。</p>
+            <p><span class="label label-body">中間</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：把「做法」寫清楚（拆解→清理→改造→放回生活），做法越具體，分數越穩</span><br>
+我先把它牽到騎樓，蹲下來研究它到底還剩下什麼。拆下來的鏈條、齒輪、車鈴，我一件一件擦乾淨；爸爸拿出工具箱，教我用砂紙磨掉鏽，再上一層防鏽漆。我們把後輪立起來，鎖上一塊舊木板，就成了一座可以放盆栽的架子；拆下來的車鈴裝在門邊，一進門就會「叮」一聲。最神奇的是，阿公以前修車用的那把扳手，竟然還卡在車架後面——我們把它留下來，掛在架子上。那個下午，我們沒有丟掉任何東西，卻好像把阿公也一起留在家裡。</p>
+            <p><span class="label label-outro">結尾</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從「廢物利用」拉高到「讓記憶繼續參與生活」，回應題目的「感受與想法」</span><br>
+賦予事物新面貌，不只是省錢或環保，而是重新問一次：「它真的只能這樣嗎？」當一臺舊車變成一盆植物和一聲門鈴，我明白所謂新面貌，其實是讓過去用另一種方式，繼續陪我們生活下去。</p>
+            <p><span class="label label-theory">使用技法</span><span class="theory-tag">具體做法</span><span class="theory-tag">舊物新生</span><span class="theory-tag">結尾拉高</span></p>
+        </div>
     </div>
 
     <!-- ============ TAB 2: 高中學測專區 ============ -->
-    <div id="Tab2" class="tabcontent" role="tabpanel" aria-hidden="true">
+    <div id="Tab2" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab-Tab2">
         <h2><span class="level-badge level-senior">高中</span> 學測國寫：四維矩陣（進階版）</h2>
         <div class="intro-box senior-box">
             <p><strong>給高中生：</strong>學測國寫分「知性題」（理性論證）與「情意題」（感性抒發）。四維矩陣可靈活套用——知性題強化第二、三維（定錨與論證），情意題強化第四維（層次翻轉）。</p>
             <p>以下矩陣用更精煉、更具分析性的語言呈現，協助你在有限時間內建構深度論述。</p>
+            <p>📌 <strong>最新年度：</strong><a href="#s115">115 學測</a>——知性題「臉」（《就算牠沒有臉》、列維納斯「他者之臉」）＋ 情意題「隔在我們之間的種種」（幾米圖文）。</p>
         </div>
 
         <div class="matrix-step senior">
@@ -398,6 +453,8 @@
                 <tr><td>福爾摩斯與華生</td><td>理性邏輯 vs 感性關懷</td><td>認知風格、專業倫理</td></tr>
                 <tr><td>大數據與隱私</td><td>便利效率 vs 個人自主</td><td>科技倫理、數位人權</td></tr>
                 <tr><td>他者理論</td><td>自我利益 vs 他者責任</td><td>倫理學、社會連帶</td></tr>
+                <tr><td>115 知性題「臉」</td><td>轉開臉（逃避）vs 承擔責任</td><td>倫理學、共情與不忍人之心</td></tr>
+                <tr><td>115 情意題「隔在我們之間的種種」</td><td>沉默自保 vs 先開口對話</td><td>溝通、情緒教育（SEL）</td></tr>
             </table></div>
             <p><strong>寫作策略：</strong>前半段分析 A 面（衝突、困境、現狀問題），經由轉折（數據、案例、個人經驗）導向 B 面（辯證、修補、超越）。</p>
         </div>
@@ -420,6 +477,8 @@
                 <tr><th>題目</th><th>物理層次</th><th>哲理層次</th></tr>
                 <tr><td>樂齡出遊</td><td>老人家的旅遊規畫</td><td>老化社會中的世代共融與尊嚴</td></tr>
                 <tr><td>標籤現象</td><td>我們愛幫人貼標籤</td><td>大腦的簡化機制vs理解他者的倫理責任</td></tr>
+                <tr><td>115 知性題「臉」</td><td>要不要給街友一百塊</td><td>承擔不一定是解決問題，而是「不把臉轉開」</td></tr>
+                <tr><td>115 情意題「隔」</td><td>我和爸爸之間的一片沉默</td><td>隔在我們之間的牆，多半是一句還沒說出口的問句</td></tr>
             </table></div>
         </div>
 
@@ -461,7 +520,7 @@
         <div class="topic-card ceec">
             <h3>108 學測：圖表與寬容</h3>
             <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「圖表數據」和「現實矛盾」的落差破題，建立論述張力</span><br>
-在這個高喊多元價值的時代，我們真的變得更寬容了嗎？圖表顯示人們對「不同」的接受度提高，但社群平台的同溫層效應卻說明了相反的故事。</p<br>
+在這個高喊多元價值的時代，我們真的變得更寬容了嗎？圖表顯示人們對「不同」的接受度提高，但社群平台的同溫層效應卻說明了相反的故事。</p>
             <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「個人經驗（封鎖朋友）」作為案例，再引用書中一句話作為理論支撐</span><br>
 去年暑假，我跟一個政治立場完全不同的朋友大吵了一架。他覺得我「被洗腦」，我覺得他「不願面對現實」。我們在 Messenger 上打字，越打越快、越打越氣，最後我封鎖了他。後來我在一本書上讀到一句話：「如果你無法用對方的語言描述對方的立場，你就沒有真正理解他。」那句話像一巴掌打醒了我。真正的寬容不是「我同意你」，而是「我不同意你，但我願意坐下來聽你說完整個故事」。社群媒體的演算法讓我們只看得到同溫層，每一次滑掉不喜歡的貼文、每一次封鎖意見不同的人，都在讓我們的寬容<br>
 肌肉萎縮。</p>
@@ -546,22 +605,51 @@
             <p><span class="label label-theory">技法</span><span class="theory-tag">文本證據</span><span class="theory-tag">解讀層次</span></p>
         </div>
 
+        <div class="topic-card ceec" id="s115">
+            <h3>115 學測國寫：題目速覽（115 年 1 月考）</h3>
+            <div class="table-wrapper"><table>
+                <tr><th>大題</th><th>取材／引文</th><th>寫作任務</th><th>高分關鍵</th></tr>
+                <tr>
+                    <td><strong>知性題</strong></td>
+                    <td>「臉」——改寫自黃宗慧、黃宗潔《就算牠沒有臉》，以韓劇《愛的迫降》的劇情引導，帶進哲學家列維納斯「他者之臉」的觀點；引文對比「有臉的小豬」與「不被視為有臉的魚」</td>
+                    <td>① 擷取引文訊息、說明「臉」與「共情」的連動關係<br>② 選定「逃避」或「承擔」的立場，以生活見聞為例論證，並寫出反思</td>
+                    <td>立場要清楚、事例要具體（街友、災民、路邊小販、賣口香糖的身障者⋯⋯），反思要從個人經驗推到制度或「愛能否傳出去」的層次</td>
+                </tr>
+                <tr>
+                    <td><strong>情意題</strong></td>
+                    <td>「隔在我們之間的種種」——幾米圖文共構（原圖文＋改編圖文），是 93 年學測之後少見的圖文引導題</td>
+                    <td>依題幹給的大綱書寫：具體寫出與某人的心結與原因 → 覺察自己的情緒與想法 → 換位思考對方的處境 → 提出開啟溝通的具體方法 → 想像可能的結果</td>
+                    <td>不能只停在記敘；要用意象承載抽象情感（牆、籬、髮髻），並真的寫出「你打算怎麼做」的溝通動作</td>
+                </tr>
+            </table></div>
+            <p class="ref-tip">💡 這一年的兩題是一體兩面：知性題問「看見別人的脆弱，你要不要承擔」，情意題問「面對身邊的隔閡，你要不要先開口」。</p>
+        </div>
+
         <div class="topic-card ceec">
-            <h3>115 學測：他者理論／人際責任</h3>
-            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:ita<br>
-lic">💡 策略：用《愛的迫降》這個流行文化作為切入點，讓抽象的理論變得可親</span><br>
-《愛的迫降》跨越了北緯 38 度線，而在現實生活中，我們是否願意跨越心中的界線去理解那個與我們不同的人？</p>
-            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「捷運站街友」的親身經歷作為案例——從具體行動出發，帶出深層的倫理思考</span><br>
-去年冬天，我在捷運站出口看到一個街友蜷縮在角落，寒風一直往騎樓灌。我走過去，在他前面的紙碗裡放了一百塊。他抬起頭來跟我說謝謝，那時候我才看清楚他的臉——大概五十幾歲，滿臉風霜。我繼續走我的路，但一個念頭一直在我腦中揮之不去：他以前是做什麼的？他怎麼會變成這樣？他有家人嗎？我發現我對他的認識，就只有「街友」兩個字。這個世界每天都在發生苦難，而我們的大腦為了保護自己，發展出一種「關機機制<br>
-」——看到太多的悲慘，我們會選擇不看。但「他者理論」告訴我們：每一個「他者」都是另一個「我」。忽略別人的痛苦，最終會讓我們自己的人性也變得麻木。真正的難題在於——如何在知道自己的能力有限之後，仍然選擇去在乎。</p>
-            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從倫理責任提升到「生存策略」——在極化時代，理解他者是讓社會走下去的關鍵</span><br>
-在一個日益極化的世界，理解他者不只是道德選擇，更是生存策略。當我們能夠真正看見彼此，差異就不再是分裂的理由，而是豐富彼此的起點。這才是人際責任最深層的意義。</p>
+            <h3>115 學測知性題：「臉」與倫理責任</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用《愛的迫降》這個流行文化切入，一句話點出「臉」不是器官，而是召喚</span><br>
+《愛的迫降》跨越了北緯 38 度線，而在現實生活中，我們是否願意跨越心中的界線，去看清一張「臉」？引文提醒我們：臉從來不只是生理構造——當你看見對方的脆弱而「不忍」，倫理責任就已經開始了。</p>
+            <p><span class="label label-body">知性論證</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：先誠實寫出「逃避」的經驗（最有真實感），再翻轉到「承擔」，最後把反思推回自己；記得先回應第一小題的「臉與共情」</span><br>
+去年冬天，我在捷運站出口看到一個街友蜷縮在角落，寒風一直往騎樓灌。我走過去，在他前面的紙碗裡放了一百塊。他抬起頭來跟我說謝謝，那時候我才看清楚他的臉——大概五十幾歲，滿臉風霜。我繼續走我的路，但一個念頭一直在我腦中揮之不去：他以前是做什麼的？他怎麼會變成這樣？他有家人嗎？我發現我對他的認識，就只有「街友」兩個字。這個世界每天都在發生苦難，而我們的大腦為了保護自己，發展出一種「關機機制」——看到太多的悲慘，我們會選擇不看。路邊小販、災區的畫面、賣口香糖的身障者，我們常常選擇繞過去，因為一旦看見那張臉，就再也沒辦法假裝不關我的事。「他者理論」告訴我們：每一個「他者」都是另一個「我」；忽略別人的痛苦，最終會讓我們自己的人性也變得麻木。真正的難題在於——如何在知道自己的能力有限之後，仍然選擇去在乎。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：從倫理責任提升到「生存策略」，並把「承擔」變成人人可以複製的小行動</span><br>
+我不是什麼偉大的人，一百塊也改變不了他的處境。但那天我學到：承擔不一定是解決問題，有時候只是「不把臉轉開」。在一個日益極化的世界，理解他者不只是道德選擇，更是生存策略——當我們能夠真正看見彼此，差異就不再是分裂的理由，而是豐富彼此的起點。</p>
             <p><span class="label label-theory">技法</span><span class="theory-tag">身份政治</span><span class="theory-tag">場域論</span><span class="theory-tag">前理解</span></p>
+        </div>
+
+        <div class="topic-card ceec">
+            <h3>115 學測情意題：「隔在我們之間的種種」</h3>
+            <p><span class="label label-intro">首段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：先承認「沉默不是不愛，而是不知道怎麼說」，一句話定義「隔」是什麼</span><br>
+我和爸爸之間隔著一片沉默。那不是討厭，也不是不在乎，而是我們都不知道該怎麼把心裡的話說出口——客廳裡只剩電視的聲音，我們最常說的一句話是「吃飯了」。</p>
+            <p><span class="label label-body">主體書寫</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：用「耳機線」當意象承載心結，寫出成因與情緒，再換位思考，最後提出具體做法</span><br>
+國三那年，我迷上樂團，每天戴著耳機寫題目。爸爸把音響轉大聲，我就把耳機塞得更深——那條耳機線，像一條拉緊的界線，我們各在兩端，誰也不肯先放手。我曾經以為他是在跟我作對，直到有一天深夜，我看見他一個人坐在客廳，電視開著，人卻在打瞌睡。那一刻我忽然懂了：他不是要跟我搶聲音，他只是不習慣安靜，也不習慣家裡的人各過各的。隔閡的成因，常常不是誰對誰錯，而是我們習慣用「猜」代替「問」、用沉默代替對話。於是隔天，我把耳機收進抽屜，走到客廳坐下來，問他：「你以前喜歡聽什麼歌？」他愣了一下，然後講了一整個晚上的民歌時代。</p>
+            <p><span class="label label-outro">末段</span><br><span style="font-size:0.82em;color:#7f8c8d;font-style:italic">💡 策略：回答題幹要求的「想像可能的結果」，並把意象收回來，讓全文閉合</span><br>
+現在我們還是會有沉默的時候，但那條線已經鬆了。原來隔在我們之間的種種，多半不是誰刻意築起的牆，而是一句還沒說出口的問句。只要有人願意先開口，那面牆就會露出一扇門。</p>
+            <p><span class="label label-theory">技法</span><span class="theory-tag">意象象徵</span><span class="theory-tag">換位思考</span><span class="theory-tag">由實入虛</span></p>
         </div>
     </div>
 
     <!-- ============ TAB 3: 破關實戰 ============ -->
-    <div id="Tab3" class="tabcontent" role="tabpanel" aria-hidden="true">
+    <div id="Tab3" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab-Tab3">
         <h2>實戰演練及工具詳解</h2>
 
         <div class="practice-box">
@@ -667,7 +755,7 @@ lic">💡 策略：用《愛的迫降》這個流行文化作為切入點，讓�
         <div class="summary-box">四維矩陣給你骨架，文學理論給你血肉。兩者結合才是高分作文完全體。</div>
             </div>
     <!-- ============ TAB 4: 文學理論 × 矩陣 ============ -->
-    <div id="Tab4" class="tabcontent" role="tabpanel" aria-hidden="true">
+    <div id="Tab4" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab-Tab4">
 <hr style="margin:30px 0;border:none;border-top:2px dashed var(--border-color);">
 
         <h2>文學理論 × 四維矩陣：進階交叉應用</h2>
@@ -726,7 +814,7 @@ lic">💡 策略：用《愛的迫降》這個流行文化作為切入點，讓�
     </div>
 
     <!-- ============ TAB 5: 會考學測常見古文30篇 ============ -->
-    <div id="Tab5" class="tabcontent" role="tabpanel" aria-hidden="true">
+    <div id="Tab5" class="tabcontent" role="tabpanel" aria-hidden="true" aria-labelledby="tab-Tab5">
         <h2>📖 會考學測常見古文 30 篇</h2>
         <div class="intro-box">
             <p>國中會考與高中學測國文科最常出現的 <strong>30 篇經典古文</strong>，每篇均附<a href="https://github.com/cormort/guwen_guanzhi" target="_blank" rel="noopener">軍師背景資料</a>與<a href="https://github.com/cormort/guwen_guanzhi" target="_blank" rel="noopener">主筆文章分析</a>，可直接點擊篇名前往閱讀。</p>
@@ -778,42 +866,141 @@ lic">💡 策略：用《愛的迫降》這個流行文化作為切入點，讓�
         </div>
     </div>
 
+    </div><!-- /#main -->
+
+    <footer class="site-footer">
+        <p><strong>資料來源：</strong>大考中心
+            <a href="https://www.ceec.edu.tw/xcepaper/cont?xsmsid=0J066588036013658199&amp;qperoid=0Q105359543716106563&amp;sid=0Q105564621271118497" target="_blank" rel="noopener">115 學年度學測試題特色【國寫】</a>、
+            <a href="https://www.ceec.edu.tw/xmfile?xsmsid=0J052424829869345634" target="_blank" rel="noopener">歷年試題及答題卷</a>、
+            <a href="https://www.ceec.edu.tw/xmdoc?xsmsid=0J071624926253508127" target="_blank" rel="noopener">學測國寫佳作</a>、
+            <a href="https://cap.rcpet.edu.tw/" target="_blank" rel="noopener">國中教育會考</a>；歷屆題目以官方公告為準，本站範文為教學示例。</p>
+        <p>最後更新：2026-09-16（新增 115 學測國寫知性題「臉」、情意題「隔在我們之間的種種」與 115 會考「賦予事物新面貌」）</p>
+    </footer>
+
     <button id="backToTop" onclick="scrollToTop()" aria-label="回到頂端">▲</button>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].setAttribute("aria-hidden", "true");
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-                tablinks[i].setAttribute("aria-selected", "false");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).setAttribute("aria-hidden", "false");
-            evt.currentTarget.className += " active";
-            evt.currentTarget.setAttribute("aria-selected", "true");
-            window.location.hash = tabName;
+    (function () {
+        'use strict';
+        var PANELS = ['Tab1', 'Tab2', 'Tab3', 'Tab4', 'Tab5'];
+        var buttons = Array.prototype.slice.call(document.querySelectorAll('.tablinks'));
+
+        function reducedMotion() {
+            return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
         }
-        window.addEventListener('DOMContentLoaded', function() {
-            var hash = window.location.hash.substring(1);
-            if (hash && document.getElementById(hash)) {
-                var btn = document.querySelector('button[onclick*="'+hash+'"]');
-                if (btn) btn.click();
-            } else {
-                var d = document.getElementById("defaultOpen");
-                if (d) d.click();
+        function buttonFor(tabName) {
+            for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].getAttribute('aria-controls') === tabName) return buttons[i];
             }
+            return null;
+        }
+
+        // 切換分頁。只改可視狀態與 aria，不在瀏覽紀錄裡塞項目（改由 hash 表示）
+        function activate(tabName, focusTab) {
+            if (PANELS.indexOf(tabName) < 0) tabName = PANELS[0];
+            PANELS.forEach(function (id) {
+                var panel = document.getElementById(id);
+                if (!panel) return;
+                var on = id === tabName;
+                panel.style.display = on ? 'block' : 'none';
+                panel.setAttribute('aria-hidden', on ? 'false' : 'true');
+            });
+            buttons.forEach(function (btn) {
+                var on = btn.getAttribute('aria-controls') === tabName;
+                btn.classList.toggle('active', on);
+                btn.setAttribute('aria-selected', on ? 'true' : 'false');
+                // roving tabindex：Tab 鍵只會停在目前選取的分頁，方向鍵在分頁間移動
+                btn.tabIndex = on ? 0 : -1;
+            });
+            if (focusTab) {
+                var b = buttonFor(tabName);
+                if (b) b.focus();
+            }
+            return tabName;
+        }
+
+        // 分頁內錨點（例如 #t4d1）也要能開啟所屬分頁
+        function tabNameForHash(hash) {
+            if (!hash) return null;
+            if (PANELS.indexOf(hash) >= 0) return hash;
+            var el = document.getElementById(hash);
+            if (el && el.closest) {
+                var panel = el.closest('.tabcontent');
+                if (panel && panel.id) return panel.id;
+            }
+            return null;
+        }
+
+        function routeFromHash(scrollToAnchor) {
+            var raw = window.location.hash.replace(/^#/, '');
+            var hash = raw ? decodeURIComponent(raw) : '';
+            var tabName = activate(tabNameForHash(hash) || PANELS[0], false);
+            // 直接連到分頁內的錨點時，捲到那個位置；連到分頁本身則回到頂端
+            if (!scrollToAnchor || !hash) return;
+            if (hash !== tabName) {
+                var target = document.getElementById(hash);
+                if (target) target.scrollIntoView({ block: 'start', behavior: reducedMotion() ? 'auto' : 'smooth' });
+            }
+        }
+
+        function setHash(tabName) {
+            var next = '#' + tabName;
+            if (window.location.hash === next) return;
+            // replaceState：切分頁不會污染上一頁，使用者按上一頁能真的離開網站
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, '', next);
+            } else {
+                window.location.hash = tabName;
+            }
+        }
+
+        buttons.forEach(function (btn, i) {
+            btn.addEventListener('click', function (evt) {
+                evt.preventDefault();
+                var tabName = activate(btn.getAttribute('aria-controls'), false);
+                setHash(tabName);
+                if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
+            });
+            btn.addEventListener('keydown', function (evt) {
+                var delta = evt.key === 'ArrowRight' ? 1 : evt.key === 'ArrowLeft' ? -1 : 0;
+                var target = null;
+                if (delta) target = buttons[(i + delta + buttons.length) % buttons.length];
+                else if (evt.key === 'Home') target = buttons[0];
+                else if (evt.key === 'End') target = buttons[buttons.length - 1];
+                if (!target) return;
+                evt.preventDefault();
+                var tabName = activate(target.getAttribute('aria-controls'), true);
+                setHash(tabName);
+            });
         });
-        window.addEventListener('scroll', function() {
-            var btn = document.getElementById('backToTop');
-            btn.classList.toggle('visible', window.scrollY > 400);
-        });
-        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+        window.addEventListener('hashchange', function () { routeFromHash(true); });
+
+        function boot() { routeFromHash(true); }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+        else boot();
+
+        var backBtn = document.getElementById('backToTop');
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                backBtn.classList.toggle('visible', window.scrollY > 400);
+                ticking = false;
+            });
+        }, { passive: true });
+
+        // 保留舊介面（外部連結或書籤若還呼叫 openTab 仍可用）
+        window.openTab = function (evt, tabName) {
+            if (evt && evt.preventDefault) evt.preventDefault();
+            var name = activate(tabName, false);
+            setHash(name);
+        };
+        window.scrollToTop = function () {
+            window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
+        };
+    })();
     </script>
 </body>
 </html>
