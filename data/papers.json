@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-21",
-  "note": "本站題目資料的單一真相。新增或修改年度題目時先改這裡，再跑 node tools/check.mjs——它會驗證 index.html 每個年度的卡片與這份清單一致（避免再出現『108/110/114 年度錯配』那類漂移）。",
+  "note": "本站題目資料的單一真相。新增或修改年度題目時先改這裡，再跑 node tools/build-pages.mjs（重新產生 cap/、gsat/ 年度頁面與 sitemap）與 node tools/check.mjs——它會驗證 index.html 每個年度的卡片與這份清單一致（避免再出現『108/110/114 年度錯配』那類漂移）。",
   "sources": [
     {
       "name": "大考中心 選才電子報：115 學測試題特色【國寫】",

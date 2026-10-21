@@ -19,3 +19,6 @@ jobs:
       # 連結健康度請在本機或發佈前跑 `node tools/check.mjs --links`。
       - name: 靜態檢查
         run: node tools/check.mjs
+      # 各年度頁面（cap/、gsat/）與 sitemap 由 index.html 產生；忘了重新產生就會在這裡失敗
+      - name: 年度頁面同步
+        run: node tools/build-pages.mjs --check
