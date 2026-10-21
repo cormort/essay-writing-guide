@@ -4,13 +4,13 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115</title>
- <meta name="description" content="四維矩陣 × 國中生/高中生雙版本：國中會考寫作（104–115，含 115「賦予事物新面貌」）× 學測國寫知性題與情意題（107–115，含 115「臉」與「隔在我們之間的種種」）完整範文、破題策略與文學理論工具。">
+ <meta name="description" content="四維矩陣 × 國中生/高中生雙版本：國中會考寫作（104–115，含 115「賦予事物新面貌」）× 學測國寫知性題與情意題（107–115，含 115「臉」與「隔在我們之間的種種」）完整範文（知性題分題範答、情意題整篇範文）、破題策略與文學理論工具。">
  <link rel="canonical" href="https://cormort.github.io/essay-writing-guide/">
  <meta name="theme-color" content="#2c3e50">
  <meta name="color-scheme" content="light">
  <meta name="author" content="cormort">
  <meta property="og:title" content="高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115">
- <meta property="og:description" content="四維矩陣 × 分級閱讀：會考寫作（104–115）× 學測國寫知性題／情意題（107–115）完整範文與破題策略。">
+ <meta property="og:description" content="四維矩陣 × 分級閱讀：會考寫作（104–115）× 學測國寫知性題分題範答／情意題整篇範文（107–115）與破題策略。">
  <meta property="og:type" content="website">
  <meta property="og:url" content="https://cormort.github.io/essay-writing-guide/">
  <meta property="og:locale" content="zh_TW">
@@ -21,7 +21,7 @@
  <meta property="og:image:alt" content="高分作文解題策略與實例分析：會考寫作 104–115、學測國寫 107–115、古文素材庫 30 篇">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="高分作文解題策略與實例分析｜會考 104–115 × 學測國寫 107–115">
- <meta name="twitter:description" content="會考寫作 × 學測國寫：四維矩陣、歷屆範文、文學理論工具與破題策略。">
+ <meta name="twitter:description" content="會考寫作 × 學測國寫：四維矩陣、107–115 知性題與情意題範文、文學理論工具與破題策略。">
  <meta name="twitter:image" content="https://cormort.github.io/essay-writing-guide/og-image.jpg">
  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
  <script type="application/ld+json">
@@ -29,7 +29,7 @@
  "@context": "https://schema.org",
  "@type": "LearningResource",
  "name": "高分作文解題策略與實例分析",
- "description": "國中會考寫作（104–115）與學測國寫（107–115）的四維矩陣解題法、歷屆範文與文學理論工具。",
+ "description": "國中會考寫作（104–115）與學測國寫（107–115）的四維矩陣解題法、知性題與情意題歷屆範文、文學理論工具。",
  "inLanguage": "zh-TW",
  "learningResourceType": "教學指南",
  "educationalLevel": ["國中", "高中"],
@@ -242,6 +242,17 @@
  table th, table td { white-space: normal; }
  }
  @media (max-width: 420px) { h1 { font-size: 1.35em; } .tab button { font-size: 0.8em; } }
+ /* 列印成講義：印出全部分頁，拿掉只在螢幕上有用的元件 */
+ @media print {
+ .tab, .skip-link, #backToTop, .dimension-nav { display: none !important; }
+ .tabcontent { display: block !important; }
+ body { background: #fff; max-width: none; padding: 0; font-size: 11pt; }
+ h2 { break-before: page; }
+ .tabcontent:first-of-type h2 { break-before: auto; }
+ h3, h4 { break-after: avoid; }
+ .matrix-step, tr { break-inside: avoid; }
+ a { color: inherit; text-decoration: none; }
+ }
  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
  </style>
 <!-- Google tag (gtag.js) -->
@@ -323,6 +334,13 @@
  <tr><td>「從陌生到熟悉」</td><td>學會騎腳踏車</td><td>克服恐懼後，發現自己比想像中勇敢</td></tr>
  <tr><td>「花草的氣味」</td><td>聞到花的味道</td><td>味道連結了回憶，讓我想起阿嬤的後花園</td></tr>
  </table></div>
+ <p><strong>另一種收法：用一個動作或畫面收尾。</strong>道理不一定要說出來，讓最後一個畫面替你說。下面左欄是本站範文改寫前的結尾，右欄是改寫後：</p>
+ <div class="table-wrapper"><table>
+ <tr><th>題目</th><th>把道理喊出來（容易變口號）</th><th>用動作或畫面收</th></tr>
+ <tr><td>「捨不得」</td><td>捨不得，是因為愛得太深。外婆的溫暖早就住在我的心裡。</td><td>我捨不得的，是那個坐在客廳慢慢打毛線、怕我著涼的人。而她還在，我隨時可以打電話給她。</td></tr>
+ <tr><td>「青銀共居」</td><td>跨世代之間最美好的事，就是互相陪伴。</td><td>我們只是學會在同一個屋簷下替對方多留一點位置，就像他每天多煎的那一條魚。</td></tr>
+ </table></div>
+ <p class="ref-tip">寫完結尾，問自己一句：換一個題目，這句話還能用嗎？能用，就太空了。「讓我學會珍惜」「不只是…更是…」這類句子，閱卷老師一天會看到幾百次。</p>
  </div>
 
  <div class="matrix-step junior">
@@ -547,6 +565,8 @@
  <tr><td>115 知性題「臉」</td><td>要不要給街友一百塊</td><td>承擔不一定是解決問題，而是「不把臉轉開」</td></tr>
  <tr><td>115 情意題「隔」</td><td>我和爸爸之間的一片沉默</td><td>隔在我們之間的牆，多半是一句還沒說出口的問句</td></tr>
  </table></div>
+ <p><strong>翻轉不一定要寫成「表面上…實際上…」。</strong>情意題尤其適合讓前文的細節回來收尾：112 情意題範文寫完青草味，最後一句是「那天我多跑了一公里」；113 知性題寫完標籤，讓被叫「肥豬」的同學再出場一次，替全班畫了最好看的海報。道理沒有明說，讀者自己看得見。</p>
+ <p class="ref-tip">檢查結尾的方法：換一個題目，這句話還能用嗎？能用，就太空了。</p>
  </div>
 
  <div class="matrix-step senior">
@@ -570,8 +590,20 @@
  </div>
 
  <h3>學測國寫實例（107–115 年）</h3>
+ <nav class="dimension-nav year-nav" aria-label="學測年度">
+ <a href="#s-list">對照表</a>
+ <a href="#s107">107</a>
+ <a href="#s108">108</a>
+ <a href="#s109">109</a>
+ <a href="#s110">110</a>
+ <a href="#s111">111</a>
+ <a href="#s112">112</a>
+ <a href="#s113">113</a>
+ <a href="#s114">114</a>
+ <a href="#s115">115</a>
+ </nav>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s-list">
  <h3>歷年題目對照表（107–115）</h3>
  <p>學測國寫固定兩大題：<strong>知性題</strong>（理性論證）＋<strong>情意題</strong>（感性抒發）。下表的題目名稱依大考中心公布的歷年試題整理：<mark>寫作練習時兩題都要練</mark>，只練知性題是歷屆考生最常見的偏食。</p>
  <div class="table-wrapper"><table>
@@ -590,7 +622,7 @@
  <p class="ref-tip">※ 知性題<strong>官方不給題名</strong>（只有 111 年題幹明訂「請以『樂齡出遊』為題」），表內名稱是依試題內容的描述性通稱，方便檢索；情意題名稱則多為題幹明訂的題目。</p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s107">
  <h3>107 學測：網路資訊與記憶（知性題）／季節的感思（情意題）</h3>
  <p><span class="label label-body">題目</span>第一大題附 Sparrow 等人的記憶實驗圖。<strong>問題（一）</strong>：依圖說明甲生為何主張「人們比較會記得資訊的儲存位置，而比較不會記得資訊的內容」，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：有人說網路資訊容易取得，會讓記憶力與思考力衰退；也有人說網路可以當成人類的外接記憶體。請提出你的看法，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：只根據圖說明，不要泛論實驗背景（評分說明點名這是常見失分）</span><br>
@@ -621,7 +653,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">感官摹寫</span><span class="theory-tag">今昔對照</span><span class="theory-tag">首尾呼應</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s108">
  <h3>108 學測：減糖圖表（知性題）／溫暖的心（情意題）</h3>
  <p><span class="label label-body">題目</span>引文先講糖的好處（運動後、飢餓時補充體力；大腦的能量主要來自葡萄糖），再講高糖飲食的風險（哈佛醫學院等：乳癌、憂鬱症；世界衛生組織：體重過重、第二型糖尿病、蛀牙、心臟病，建議添加糖不超過總熱量 10%，約 50 公克），附國民健康署 103–106 年調查的兩張長條圖（圖 1：每週至少喝 1 次含糖飲料的人數百分比；圖 2：這些人每週平均喝幾次）。<strong>問題（一）</strong>：若針對 18 歲（含）以下學生做減糖宣導，依圖指出最優先的群體（須註明性別）與理由，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：對「<mark>中、小學校園禁止含糖飲料</mark>」表態贊成或反對並論述，<strong>400 字以內</strong>。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：兩張圖都要用到，年齡層和性別都要寫出來，數字直接引用；限 80 字，不要寫感想</span><br>
@@ -653,7 +685,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">以小見大</span><span class="theory-tag">呼應引文</span><span class="theory-tag">傳承收尾</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s109">
  <h3>109 學測：玩物喪志／玩物養志（知性題）／〈靜夜情懷〉（情意題）</h3>
  <p><span class="label label-body">題目</span>引文改寫自張盈堃〈物體系：玩具的文化分析〉，談玩具的歷史、分類與意義。<strong>問題（一）</strong>：依據引文說明<strong>積木誕生的背景因素</strong>，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：<mark>就個人成長經驗</mark>，表明玩具對你較偏向「玩物喪志」或「玩物養志」，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：先抓時代（啟蒙主義），再歸納成「教育思潮轉變」，最後接到積木</span><br>
@@ -682,7 +714,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">以聲寫靜</span><span class="theory-tag">呼應引文</span><span class="theory-tag">餘韻收尾</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s110">
  <h3>110 學測：經驗機器（知性題）／如果我有一座新冰箱（情意題）</h3>
  <p><span class="label label-body">題目</span><strong>問題（一）</strong>：比較電影《王牌冤家》的「忘情診所」與《健忘村》刪除記憶的情節差異，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：設想「經驗機器」穩定運作後對人類的影響，並表明是否支持開放上市，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：從「誰決定刪」和「刪來做什麼」兩個角度對照，各用一句話</span><br>
@@ -714,7 +746,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">虛實整合</span><span class="theory-tag">借物寫人</span><span class="theory-tag">結尾翻轉</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s111">
  <h3>111 學測：樂齡出遊（知性題）／當我打開課本（情意題）</h3>
  <p><span class="label label-body">題目</span>引文介紹兩個樂齡活動：臺灣 2007 年的「不老騎士」（長者自己騎機車環島）與丹麥哥本哈根 2012 年的「樂齡卡打車」（志工騎三輪車載長者遊城）。<strong>問題（一）</strong>：比較兩者活動內容的差異與用意，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：<mark>以「樂齡出遊」為題</mark>，說明其意義，並思考如何照顧長者的<strong>生理與情感需求</strong>，<strong>400 字以內</strong>。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：兩個活動各寫「內容＋用意」，抓住最具體的差異（誰騎車）</span><br>
@@ -743,7 +775,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">選定一科</span><span class="theory-tag">以小見大</span><span class="theory-tag">物件收尾</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s112">
  <h3>112 學測：福爾摩斯與華生的生活態度（知性題）／花草樹木的氣味記憶（情意題）</h3>
  <p><span class="label label-body">題目</span>引文改寫自科林‧布魯斯《數字的陷阱‧不幸商人案》：華生自己買麵包和火腿做三明治，福爾摩斯指出他犯了兩個錯。<strong>問題（一）</strong>：站在福爾摩斯的立場，說明華生犯了哪兩個錯誤，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：分析福爾摩斯與華生不同的生活態度，並說明你較傾向哪一種，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：限 80 字，不能照抄原文；兩個錯誤分開寫，數字直接引用</span><br>
@@ -773,7 +805,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">嗅覺摹寫</span><span class="theory-tag">一味兩情</span><span class="theory-tag">動作收尾</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s113">
  <h3>113 學測：標籤現象（知性題）／縫隙的聯想（情意題）</h3>
  <p><span class="label label-body">題目</span>甲、乙兩篇短文談「標籤」：一篇偏重標籤造成的刻板印象，一篇偏重標籤對自我認同與行為的影響。<strong>問題（一）</strong>：依據甲、乙二文，說明「標籤」用在人身上的<strong>正面與負面作用</strong>，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：日常生活中不乏「貼標籤」或「被貼標籤」的實例，請<mark>舉例說明你對標籤現象的看法</mark>，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：正、負面分開寫，兩篇引文的重點都要用到，不寫自己的看法</span><br>
@@ -805,7 +837,7 @@
  <p><span class="label label-theory">技法</span><span class="theory-tag">先抑後揚</span><span class="theory-tag">以物喻人</span><span class="theory-tag">首尾呼應</span></p>
  </div>
 
- <div class="topic-card ceec">
+ <div class="topic-card ceec" id="s114">
  <h3>114 學測：擬社會互動（知性題）／關於 52 赫茲，我想說的是……（情意題）</h3>
  <p><span class="label label-body">題目</span>引文改寫自泛科學〈「擬社會互動」的本質與其引發的社會問題〉：這個概念由霍頓與沃荷在 1956 年提出，指觀眾對媒體人物產生的單向親密感。<strong>問題（一）</strong>：依據引文說明粉絲與公眾人物擬社會互動的<strong>特徵</strong>，<strong>80 字以內</strong>（4 分）。<strong>問題（二）</strong>：觀察當代公眾人物與大眾透過臉書、IG 等社群媒體形成的擬社會互動，<mark>闡述其正、負面影響</mark>，<strong>400 字以內</strong>（21 分）。</p>
  <p><span class="label label-intro">問題（一）</span><br><span class="strategy">策略：從引文找出「特徵」的關鍵句，歸納成兩層：情感上單向投入、關係上缺乏實際互動</span><br>
@@ -915,7 +947,7 @@
  <tr><td>一、字面拆解</td><td>劃定寫作邊界</td><td>拆解詞性，找出隱形限制 <span class="theory-tag">文類</span><span class="theory-tag">形式</span></td><td>主角是誰？動作是什麼？寫過去還是未來？</td></tr>
  <tr><td>二、核心定錨</td><td>建立文章張力</td><td>尋找對立面，製造衝突轉折 <span class="theory-tag">議題</span><span class="theory-tag">浪漫</span></td><td>這題考什麼價值觀？什麼與什麼在拉扯？</td></tr>
  <tr><td>三、素材映射</td><td>決定切入視角</td><td>大題小作，小題大作 <span class="theory-tag">意識流</span><span class="theory-tag">結構</span></td><td>用什麼具體「載體」表現這個抽象概念？</td></tr>
- <tr><td>四、層次翻轉</td><td>提升文章格局</td><td>「表面上是 A，實際上是 B」 <span class="theory-tag">雙重解讀</span><span class="theory-tag">典型</span></td><td>這個經驗帶來什麼更深層的生命哲理？</td></tr>
+ <tr><td>四、層次翻轉</td><td>提升文章格局</td><td>「表面上是 A，實際上是 B」，或讓前文細節回來收尾 <span class="theory-tag">雙重解讀</span><span class="theory-tag">典型</span></td><td>這個經驗帶來什麼更深層的生命哲理？</td></tr>
  </tbody>
  </table></div>
 
@@ -962,7 +994,7 @@
  <div class="matrix-step">
  <h3>第四維：層次翻轉（寫出昇華與餘韻）</h3>
  <p>這一步常常決定分數落在 A 還是 B。</p>
- <p>套用句型：<strong>「這表面上是（物理事件），實際上卻是（心理狀態/哲理）。」</strong></p>
+ <p>套用句型：<strong>「這表面上是（物理事件），實際上卻是（心理狀態/哲理）。」</strong>也可以不說破，用一個動作或畫面收尾（見會考專區第 ④ 步的對照表）。</p>
  <div class="table-wrapper"><table>
  <thead><tr><th>題目</th><th>表面</th><th>實際</th></tr></thead>
  <tbody>
@@ -1107,7 +1139,7 @@
  <strong>不是</strong>大考中心公布的佳作；官方佳作請見上方「學測國寫佳作」連結。</p>
  <p><strong>隱私與追蹤：</strong>本站使用 Google Analytics（gtag.js）統計瀏覽人次，未設定任何廣告或跨站追蹤；
  相關資料處理請見 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</p>
- <p>最後更新：2026-10-21（內容 review：修正 110 會考範文前後矛盾、113 會考標題誤植、115 學測知性題的列維納斯誤引與不相干的技法標籤、114 學測情意題題名；範文去掉套話與口號式結尾；策略提示改用 class、移除句中斷行；107–115 學測知性題依原題分開問題（一）（二）並標出字數限制、範答都在限制內；會考專區補上考試規格，112 學測、114 會考題目描述與範文依原題校正；新增 107–114 學測情意題完整範文（107、108 含問題（一）範答）；古文素材庫修正〈出師表〉〈醉翁亭記〉引文；文學理論分頁修正米爾斯、文體學偏離說的出處）<br>
+ <p>最後更新：2026-10-21（結尾教學補上「用動作或畫面收尾」與前後對照；學測專區加年度跳轉；支援列印成講義；內容 review：修正 110 會考範文前後矛盾、113 會考標題誤植、115 學測知性題的列維納斯誤引與不相干的技法標籤、114 學測情意題題名；範文去掉套話與口號式結尾；策略提示改用 class、移除句中斷行；107–115 學測知性題依原題分開問題（一）（二）並標出字數限制、範答都在限制內；會考專區補上考試規格，112 學測、114 會考題目描述與範文依原題校正；新增 107–114 學測情意題完整範文（107、108 含問題（一）範答）；古文素材庫修正〈出師表〉〈醉翁亭記〉引文；文學理論分頁修正米爾斯、文體學偏離說的出處）<br>
  先前更新：2026-09-16（整體 review：修復 110 會考範例標籤樣式、手機版表格換行、標題階層與對比度；依官方試題本校正 107／110／112／114 學測與 112–114 會考題目、112–114 各年獨立成卡；工具來源改標真實出處；新增 og:image、robots/sitemap 與 tools/check.mjs）<br>
  先前更新：2026-09-16（新增 115 學測國寫知性題「臉」、情意題「隔在我們之間的種種」、115 會考「賦予事物新面貌」；依大考中心歷年試題校正 107–114 學測題目並補上歷年情意題；古文分頁改為「古文素材庫」：30 篇依寫作用途分 5 組、每篇加上扣題句，並移除 8 個指向不存在檔案的連結）</p>
  </footer>

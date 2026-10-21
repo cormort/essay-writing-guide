@@ -116,7 +116,8 @@ console.log('\n=== B. 內容一致性（data/papers.json 是單一真相） ==='
   const banned = ['致敬', '真諦', '旅程', '完全體', 'marriage', 'yyds', '破防'];
   const text = withoutBlocks.replace(/<[^>]+>/g, '');
   const hits = banned.filter((w) => text.includes(w));
-  const pattern = (text.match(/不只是[^。！？]{0,30}更是/g) || []);
+  // 教學段落會用「不只是…更是…」（含刪節號）當反面例子，只抓真的寫成句子的
+  const pattern = (text.match(/不只是[^。！？…]{1,30}更是/g) || []);
   ok('範文沒有回到 AI 套話（致敬、真諦、旅程、「不只是…更是…」）', hits.length === 0 && pattern.length === 0,
     [...hits, ...pattern].slice(0, 4).join('、') || '0 處');
 }
