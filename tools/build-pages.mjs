@@ -153,6 +153,41 @@ ${pg.cards.map((c) => adapt(c, pg.ids)).join('\n\n')}
 const outputs = new Map();
 for (const pg of pages) outputs.set(join(ROOT, pg.dir, 'index.html'), render(pg));
 
+// 404.html：GitHub Pages 對任何深度的錯誤網址都回這一頁，所以連結一律用站台絕對路徑
+const BASE = new URL(SITE).pathname; // /essay-writing-guide/
+const yearLinks = (kind) => pages.filter((p) => p.kind === kind).map((p) => `<a href="${BASE}${p.dir}/">${p.year}</a>`).join('\n ');
+outputs.set(join(ROOT, '404.html'), `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>找不到這一頁｜高分作文解題策略</title>
+ <meta name="robots" content="noindex">
+ <meta name="theme-color" content="#2c3e50">
+ <meta name="color-scheme" content="light">
+ ${icon}
+ ${style}
+</head>
+<body>
+ <!-- 本頁由 tools/build-pages.mjs 產生，請勿直接編輯 -->
+ <h1>找不到這一頁</h1>
+ <p class="subtitle">網址可能打錯了，或這一頁已經搬家。可以從下面找找看：</p>
+ <div id="main">
+ <p><a href="${BASE}">回到主頁：高分作文解題策略與實例分析</a></p>
+ <h2>會考作文（104–115）</h2>
+ <nav class="dimension-nav" aria-label="會考年度">
+ ${yearLinks('cap')}
+ </nav>
+ <h2>學測國寫（107–115）</h2>
+ <nav class="dimension-nav" aria-label="學測年度">
+ ${yearLinks('gsat')}
+ </nav>
+ <p class="ref-tip">也可以直接看 <a href="${BASE}#Tab3">實戰演練</a>、<a href="${BASE}#Tab4">文學理論 × 四維矩陣</a> 或 <a href="${BASE}#Tab5">古文素材庫</a>。</p>
+ </div>
+</body>
+</html>
+`);
+
 const urls = [SITE, ...pages.map((pg) => `${SITE}${pg.dir}/`)];
 outputs.set(join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
