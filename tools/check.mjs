@@ -106,6 +106,37 @@ console.log('\n=== B. 內容一致性（data/papers.json 是單一真相） ==='
     notInJson.length ? `未登記：${notInJson.join('、')}` : `${htmlCapYears.length} 個年度都在清單內`);
 }
 
+{
+  // 句中斷行：<br> 夾在兩個漢字中間（曾出現「壞<br>人」「要選<br>有錢途」，畫面上句子被硬切成兩行）
+  const mid = [...withoutBlocks.matchAll(/([\u4e00-\u9fff])<br>\s*([\u4e00-\u9fff])/g)].map((m) => `${m[1]}<br>${m[2]}`);
+  ok('範文裡沒有把句子硬切開的 <br>', mid.length === 0, mid.slice(0, 4).join('、') || '0 處');
+}
+{
+  // 去 AI 腔：這些詞曾大量出現在範文結尾，換成具體細節後不該再回來
+  const banned = ['致敬', '真諦', '旅程', '完全體', 'marriage', 'yyds', '破防'];
+  const text = withoutBlocks.replace(/<[^>]+>/g, '');
+  const hits = banned.filter((w) => text.includes(w));
+  const pattern = (text.match(/不只是[^。！？]{0,30}更是/g) || []);
+  ok('範文沒有回到 AI 套話（致敬、真諦、旅程、「不只是…更是…」）', hits.length === 0 && pattern.length === 0,
+    [...hits, ...pattern].slice(0, 4).join('、') || '0 處');
+}
+{
+  // 學測知性題：題目寫「N 字以內」，範答就不能超過（標點也算字）
+  const over = [];
+  for (const m of withoutBlocks.matchAll(/<div class="topic-card[^"]*"[^>]*>\s*<h3>([^<]+)<\/h3>([\s\S]*?)<\/div>/g)) {
+    const [, title, body] = m;
+    const topic = body.match(/<span class="label label-body">題目<\/span>([\s\S]*?)<\/p>/);
+    if (!topic) continue;
+    const limits = [...topic[1].matchAll(/(\d+) 字以內/g)].map((x) => +x[1]);
+    const parts = [...body.matchAll(/<span class="label [^"]+">([^<]+)<\/span><br><span class="strategy">[^<]*<\/span><br>\s*([^<]+)<\/p>/g)];
+    const len = (pred) => parts.filter((x) => pred(x[1])).reduce((n, x) => n + x[2].trim().length, 0);
+    const q1 = len((l) => l === '問題（一）'), q2 = len((l) => l.startsWith('問題（二）'));
+    if (limits[0] && q1 > limits[0]) over.push(`${title.slice(0, 8)} 問題（一）${q1}/${limits[0]}`);
+    if (limits[1] && q2 > limits[1]) over.push(`${title.slice(0, 8)} 問題（二）${q2}/${limits[1]}`);
+  }
+  ok('知性題範答都在題目的字數限制內', over.length === 0, over.join('；') || '全部合格');
+}
+
 console.log('\n=== C. SEO／分享／資源 ===');
 {
   const need = ['<title>', 'name="description"', 'rel="canonical"', 'property="og:title"', 'property="og:image"', 'name="twitter:card"', 'application/ld+json'];
